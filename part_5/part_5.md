@@ -74,7 +74,7 @@ Exemple :
 
 En principe, une API est censé faciliter le travail des data engineers. En pratique, cela est moins vrai, car les APIs donne beaucoup de liberté à ceux qui la développe et donc ceux qu’ils l’utilisent peuvent avoir des difficultés avec des documentations exotiques voir inexistante.
 
-**Base de données d’application (OLTP)**
+## Base de données d’application (OLTP)
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.007.png" />
@@ -86,7 +86,7 @@ OLTP signifie "OnLine Transaction Processing" (traitement des transactions en li
 
 Les OLTP reflète l'état actuel d’une entité (entreprise par exemple) elles sont performantes écriture, mais pas en lecture, ce n’est pas forcément l’outil à privilégier pour l’analyse
 
-**ACID**
+## ACID
 
 Les principes ACID sont un ensemble de règles qui définissent les caractéristiques d'une base de données fiable et efficace. Les lettres ACID signifient :
 
@@ -98,7 +98,7 @@ protège contre les actions qui pourraient causer des incohérences dans les don
 - Isolation : Les transactions sont isolées les unes des autres, ce qui signifie qu'une transaction en cours n'est pas affectée par les autres transactions en cours. L'isolation est importante, car elle garantit que les transactions sont isolées les unes des autres. Cela empêche les conflits entre les transactions en cours qui pourraient causer des incohérences dans les données de la base de données. Elle protège contre les effets de transactions en cours sur les autres transactions en cours.
 - Durabilité : Les données modifiées par une transaction sont permanentes et restent en place même en cas de pannes de courant ou de crash du système. La durabilité est importante, car elle garantit que les données modifiées par une transaction sont permanentes et restent en place même en cas de pannes de courant ou de crash du système. Cela empêche la perte de données critiques et permet de conserver une trace des transactions effectuées. Elle protège contre les pertes de données qui pourraient être causées par des pannes de courant ou des erreurs logicielles.
 
-**Transactions atomiques**
+## Transactions atomiques
 
 Une transaction dans une base de données est un ensemble d'opérations logiques qui ont un début et une fin, et qui sont exécutées ensemble comme une unité atomique.
 
@@ -110,13 +110,13 @@ Une fois qu'une transaction est terminée, les modifications apportées aux donn
 
 Par exemple, si plusieurs transactions en cours modifient les mêmes données, les systèmes de gestion de bases de données utilisent des algorithmes de verrous pour garantir que les transactions soient exécutées de manière à éviter les conflits. Les transactions sont généralement utilisées pour les opérations courantes comme les ajouts, les suppressions et les mises à jour de données dans une base de données OLTP.
 
-**Online Analytical Processing System**
+## Online Analytical Processing System
 
 Un système OLAP (Online Analytical Processing) est conçu pour exécuter des requêtes d'analyse volumineuses et est généralement inefficace pour gérer les recherches d'enregistrements individuels, la plupart du temps, elles réunissent plusieurs données issues de différente source (souvent plusieurs OLTP) pour avoir une vision multidimensionnelle.
 
 L’OLAP est optimisé pour la lecture et donc très prisé pour les problématiques d’analyse et data science. Dans la majorité des cas, les OLAPs servent surtout de Datawarehouse et donc sont le point d’arrivée des data engineers, mais avec la popularisation de ETL inversé, il est possible que vous en rencontriez en tant que source de données.
 
-**Change Data Capture**
+## Change Data Capture
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.008.png" />
@@ -134,7 +134,7 @@ Il y a plusieurs cas d'utilisation courants pour CDC :
 - L'intégration de données : Utilisé pour synchroniser les données entre différents systèmes pour assurer l'intégrité des données et éviter les incohérences.
 - La surveillance de données : Utilisé pour surveiller les données pour détecter les anomalies ou les activités suspectes.
 
-**Logs**
+## Logs
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.009.png" />
@@ -174,7 +174,7 @@ Les logs ont principalement 3 formes :
 - Non-structuré : Texte
   - Facile à lire pour l’humain, mais quasiment impossible à utiliser pour la machine
 
-**Logs pour les bases de données**
+## Logs pour les bases de données
 
 Les Logs des bases de données ont un rôle encore plus spécifique et critique, ils sont encodés en binaire et permettent si jamais la BDD venait à être perdu à la reconstruire, en effet comme tous les types de transaction sont enregistrés, cette opération de backup est possible. Ces mêmes Logs servent pour les CDC que nous avons vu précédemment.
 
@@ -182,7 +182,7 @@ Les Logs des bases de données ont un rôle encore plus spécifique et critique,
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.011.png" />
 </p>
 
-**CRUD**
+## CRUD
 
 Signifie *create* , *read* , *update* et *delete* , est un modèle transactionnel couramment utilisé en programmation et représente les quatre opérations de base du stockage persistant. ce modèle est couramment utilisé dans le SQL et les API (HTTP dans le tableau ci-dessous)
 
@@ -190,7 +190,7 @@ Signifie *create* , *read* , *update* et *delete* , est un modèle transactionne
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.012.jpeg" />
 </p>
 
-**Insert-Only**
+## Insert-Only
 
 Historise directement dans une table contenant des données. Plutôt que de mettre à jour les enregistrements, les nouveaux enregistrements sont insérés avec un horodatage indiquant quand ils ont été créés, on n'est pas vraiment dans un modèle CRUD mais plutôt dans une forme de combinaison de base de données & Database logs, car tout l’historique est conservé.
 
@@ -199,7 +199,7 @@ Considération :
 - Premièrement, les tableaux peuvent devenir assez volumineux, surtout si les données changent fréquemment
 - Le deuxième inconvénient est que les recherches d'enregistrement entraînent une surcharge supplémentaire puisque la recherche de l'état actuel implique l'exécution de MAX(created\_timestamp)
 
-**Messages and Streams**
+## Messages and Streams
 
 Contrairement à ce que l’on pense, une message queue et une streaming platform sont deux choses différentes.
 
@@ -223,7 +223,7 @@ En revanche, un *stream* est un journal d'enregistrements d'événements en appe
 
 Les streams peuvent traiter les messages et que les plateformes de streaming sont fréquemment utilisées pour la transmission des messages. Nous accumulons habituellement des messages dans des stream lorsque nous souhaitons effectuer des analyses de messages.
 
-**Types de temps**
+## Types de temps
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.016.png" />
@@ -231,13 +231,13 @@ Les streams peuvent traiter les messages et que les plateformes de streaming son
 
 Vous souhaiterez enregistrer ces différents temps, de préférence de manière automatisée. Configurez la surveillance le long de vos workflows de données pour capturer quand les événements se produisent, quand ils sont ingérés et traités, et combien de temps, il a fallu pour traiter les événements.
 
-**Détails pratiques du système source**
+## Détails pratiques du système source
 
 Maintenant que nous avons vu les différents types de système source, nous allons entrer dans les détails qu’un data engineer doit connaître
 
-**Bases de données**
+## Bases de données
 
-**Principales considérations pour comprendre les technologies de bases de données**
+## Principales considérations pour comprendre les technologies de bases de données
 
 - *Recherches*
 
@@ -263,7 +263,7 @@ Maintenant que nous avons vu les différents types de système source, nous allo
 
 *a base de données est-elle entièrement cohérente ou prend-elle en charge un modèle de cohérence souple (par exemple, cohérence éventuelle) ?*
 
-**Bases de données relationnelles**
+## Bases de données relationnelles
 
 *Le système de gestion de base de données relationnelle* (RDBMS) est l'un des backends d'application les plus courants
 
@@ -281,7 +281,7 @@ Il est possible de concevoir un *schéma normalisé* . La normalisation est une 
 
 Les systèmes RDBMS sont généralement conformes à ACID.
 
-**Base de données non relationnelles : NoSQL (Not only SQL)**
+## Base de données non relationnelles : NoSQL (Not only SQL)
 
 Les base de donnée relationnelle était par le passé une solution fourre tout, cependant avec l’avènement du big data, on a commencé à rentrer de nouvelles problématiques.
 
@@ -289,7 +289,7 @@ Prenons les données semi-structuré comme le JSON, dans la majorité des cas se
 
 D'une part, la suppression des contraintes relationnelles peut améliorer les performances, l'évolutivité et la flexibilité du schéma. Mais comme toujours en architecture, des compromis existent. Les bases de données NoSQL abandonnent également généralement diverses caractéristiques du SGBDR, telles que la cohérence forte, les jointures ou un schéma fixe.
 
-**Key-value stores**
+## Key-value stores
 
 Une base de données clé-valeur est une base de données non relationnelle qui récupère les enregistrements à l'aide d'une clé qui identifie de manière unique chaque enregistrement.<p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.018.jpeg" />
@@ -304,7 +304,7 @@ Considération :
 - Pas de requêtes de jointure : Les magasins de clés-valeurs ne prennent pas en charge les requêtes de jointure, ce qui peut rendre plus difficile la manipulation de certaines données.
 - Pas de garantie de consistance : Les magasins de clés-valeurs peuvent gérer la consistance des données de différentes manières, ce qui peut rendre difficile de garantir la consistance des données dans certaines situations
 
-**Document stores**
+## Document stores
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.019.jpeg" />
@@ -325,7 +325,7 @@ Consdération :
 - Consistance des données : Les magasins de documents peuvent gérer la consistance des données de différentes manières, ce qui peut rendre difficile de garantir la consistance des données dans certaines situations.
 - Coûts de stockage : les magasins de documents peuvent nécessiter plus d'espace de stockage pour stocker les mêmes données qu'une base de données relationnelle en raison de la duplication de données qui peut se produire lorsque les données sont stockées sous forme de documents.
 
-**Wide-column**
+## Wide-column
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.021.jpeg" />
@@ -342,7 +342,7 @@ Considération :
 - Coûts plus élevés: Les systèmes de colonnes larges peuvent nécessiter des coûts de stockage et de calcul plus élevés que les systèmes de lignes en raison de la nécessité de gérer des volumes importants de données en parallèle.
 - Moins adapté pour les requêtes JOIN: Les systèmes de colonnes larges ne sont pas aussi efficaces pour les requêtes JOIN que les systèmes de lignes, car ils nécessitent souvent de rechercher les données dans plusieurs colonnes différentes pour répondre à une requête.
 
-**Graph databases**
+## Graph databases
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.022.png" />
@@ -366,13 +366,13 @@ Considération :
 - Complexité accrue: Les bases de données graphiques peuvent être plus complexes à gérer et à maintenir que les bases de données relationnelles ou orientées document, en raison de la nature distribuée et la complexité des relations dans les graphes.
 - Moins adapté pour les requêtes de type agrégation: Les bases de données graphiques ne sont pas aussi efficaces pour les requêtes de type agrégation que les bases de données relationnelles, car ils nécessitent souvent de parcourir de nombreux sous-graphes pour répondre à une requête.
 
-**Search**
+## Search
 
 Une base de données de recherche est un type de base de données qui est conçue pour stocker et rechercher rapidement des données textuelles. Ces bases de données sont souvent utilisées pour stocker des documents, des pages web, des courriers électroniques et d'autres types de données textuelles.
 
-**APIs**
+## APIs
 
-**REST**
+## REST
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.024.jpeg" />
@@ -391,7 +391,7 @@ Considération :
 - Peu de soutien pour les protocoles non-HTTP
 - Pas de standard pour la description de la structure des ressources
 
-**Webhooks**
+## Webhooks
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.025.jpeg" />
@@ -410,19 +410,19 @@ Considération :
 - Sécurité : les webhooks peuvent représenter un risque de sécurité si l'URL de notification n'est pas sécurisée.
 - Dépendance de la plateforme : les webhooks peuvent être spécifiques à une plateforme ou à un service, ce qui peut rendre difficile leur utilisation avec d'autres systèmes.
 
-**Data Sharing**
+## Data Sharing
 
 Les concepts de partage de données dans le cloud sont qu'un système multilocataire prend en charge les politiques de sécurité pour le partage des données entre les locataires. Concrètement, tout système de stockage d'objets dans le cloud public doté d'un système d'autorisation à granularité fine peut être une plate-forme de partage de données. Les plates-formes d'entrepôt de données cloud populaires prennent également en charge les capacités de partage de données. Les données peuvent également être partagées par téléchargement ou échange par e-mail, mais un système multi-locataire rend le processus beaucoup plus facile.
 
-**Third-Party Data Sources**
+## Third-Party Data Sources
 
 De plus en plus les agences gouvernementales, souhaitent mettre leurs données à la disposition de leurs clients et utilisateurs, soit dans le cadre de leur service, soit dans le cadre d'un abonnement séparé. Par exemple, le Bureau of Labor Statistics des États-Unis publie diverses statistiques sur le marché du travail américain. La National Aeronautics and Space Administration (NASA) publie diverses données issues de ses initiatives de recherche. Facebook partage des données avec des entreprises qui font de la publicité sur sa plateforme.
 
 L'accès direct aux données tierces se fait généralement via des API, via le partage de données sur une plate-forme cloud ou via le téléchargement de données.
 
-**Message Queues and Event-Streaming Platforms**
+## Message Queues and Event-Streaming Platforms
 
-**Message queues**
+## Message queues
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.026.png" />
@@ -432,17 +432,17 @@ Une *message queues* est un mécanisme permettant d'envoyer des données de mani
 
 Les files d'attente de messages permettent de découpler les applications et les systèmes les uns des autres et sont largement utilisées dans les architectures de microservices. La file d'attente de messages met les messages en mémoire tampon pour gérer les pics de charge transitoires et rend les messages durables via une architecture distribuée avec réplication.
 
-**Ordre et livraison des messages**
+## Ordre et livraison des messages
 
 Les messages peuvent être publiés et reçus dans le désordre, en particulier dans les systèmes de messagerie hautement distribués. vous devez généralement concevoir pour la livraison de messages dans le désordre.
 
-**Fréquence de livraison**
+## Fréquence de livraison
 
 Les messages peuvent être envoyés une seule fois ou au moins une fois. Si un message est envoyé *exactement une fois* , une fois que l'abonné a accusé réception du message, le message disparaît et ne sera plus remis. [7](https://learning.oreilly.com/library/view/fundamentals-of-data/9781098108298/ch05.html#idm45075125319424) Les messages envoyés *au moins une fois* peuvent être consommés par plusieurs abonnés ou par le même abonné plus d'une fois. C'est très bien lorsque les duplications ou la redondance n'ont pas d'importance.
 
-**Scalabilité**
+## Scalabilité
 
-**Event-streaming platforms**
+## Event-streaming platforms
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.027.png" />
@@ -450,7 +450,7 @@ Les messages peuvent être envoyés une seule fois ou au moins une fois. Si un m
 
 Les plateformes de streaming d'événements sont des systèmes qui permettent de collecter, de stocker et de traiter des stream de données en temps réel, souvent à grande échelle. Ces stream de données peuvent être générés par des sources telles que les capteurs IoT, les applications d'entreprise et les sources de données externes. Les plateformes de streaming d'événements permettent de traiter ces données en temps réel pour des applications telles que l'analyse de données en temps réel, la détection d'anomalies et les systèmes de recommandation. Dans une plate-forme de streaming d'événements, les données sont conservées pendant un certain temps et il est possible de rejouer les messages d'un moment passé.
 
-**Topics**
+## Topics
 
 Dans une plate-forme de diffusion d'événements, un producteur diffuse des événements sur un sujet, une collection d'événements connexes. Un sujet peut contenir des alertes de fraude, des commandes de clients ou des relevés de température provenant d'appareils IoT, par exemple. Un sujet peut avoir zéro, un ou plusieurs producteurs et clients sur la plupart des plateformes de streaming d'événements.
 
@@ -462,7 +462,7 @@ Différence avec les messages queue :
 
 - Les plateformes de streaming d'événements se concentrent sur la collecte, le stockage et le traitement des données en temps réel, tandis que les files d'attente de messages se concentrent sur la mise en file d'attente des messages pour un traitement ultérieur.
 
-**Stream partitions**
+## Stream partitions
 
 <p align="center">
   <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.029.png" />

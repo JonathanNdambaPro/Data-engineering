@@ -4,7 +4,7 @@
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.001.png" />
 </p>
 
-**Requêtes**
+## Requêtes
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.002.png" />
@@ -18,13 +18,13 @@ Il est comparable au CRUD de la manière suivante :
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.003.png" />
 </p>
 
-**Data definition language (DDL)**
+## Data definition language (DDL)
 
 À un niveau élevé, vous devez d'abord créer les objets de la base de données avant d'ajouter des données. Vous utiliserez *commandes DDL.*
 
 Les ingénieurs de données utilisent des expressions SQL DDL courantes :CREATE,DROP etUPDATE.
 
-**Data manipulation language (DML)**
+## Data manipulation language (DML)
 
 Après avoir utilisé DDL pour définir des objets de base de données, vous devez ajouter et modifier des données dans ces objets, vous devrez utiliser les commandes DML.
 
@@ -32,7 +32,7 @@ Après avoir utilisé DDL pour définir des objets de base de données, vous dev
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.004.png" />
 </p>
 
-**Data control language (DCL)**
+## Data control language (DCL)
 
 *Data control language* (DCL) vous permet de contrôler l'accès aux objets de la base de données ou aux données à l'aide de commandes SQL telles queGRANT,DENY etREVOKE
 
@@ -48,11 +48,11 @@ on donne le droit à Sarah d’accéder à la BDD data\_science\_db en lecture s
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.006.png" />
 </p>
 
-Ici, on révoque ce même droit de lecture **Transaction control language**
+Ici, on révoque ce même droit de lecture ## Transaction control language
 
 Avec TCL, nous pouvons définir des points de contrôle de validation, des conditions d'annulation des actions, etc. Deux commandes TCL courantes incluentCOMMITet ROLLBACK.
 
-**La vie d'une requête**
+## La vie d'une requête
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.007.png" />
@@ -63,7 +63,7 @@ Avec TCL, nous pouvons définir des points de contrôle de validation, des condi
 - L'optimiseur de requête de la base de données analyse le bytecode pour déterminer comment exécuter la requête, réorganiser et refactoriser les étapes pour utiliser les ressources disponibles aussi efficacement que possible.
 - La requête est exécutée et les résultats sont produits.
 
-**L'optimiseur de requête**
+## L'optimiseur de requête
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.008.png" />
@@ -71,9 +71,9 @@ Avec TCL, nous pouvons définir des points de contrôle de validation, des condi
 
 Les requêtes peuvent avoir des temps d'exécution très différents, selon la façon dont ils sont exécutés. Le travail d'un optimiseur de requêtes consiste à optimiser les performances des requêtes et à minimiser les coûts en divisant la requête en étapes appropriées dans un ordre efficace.
 
-**Amélioration des performances des requêtes**
+## Amélioration des performances des requêtes
 
-**Optimisez votre stratégie et votre schéma de jointure**
+## Optimisez votre stratégie et votre schéma de jointure
 
 Un ensemble de données unique (comme une table ou un fichier) est rarement utile en soi ; nous créons de la valeur en la combinant avec d'autres ensembles de données. *Les jointures* sont l'un des moyens les plus courants de combiner des ensembles de données et d'en créer de nouveaux.
 
@@ -82,7 +82,7 @@ Un ensemble de données unique (comme une table ou un fichier) est rarement util
 - Tenez compte des détails et de la complexité de vos conditions de jointure. La logique de jointure complexe peut consommer des ressources de calcul importantes
 - Utilisez-les common table expressions (CTEs) au lieu desous-requêtes ou tables temporaires imbriquées. Les CTE permettent aux utilisateurs de composer ensemble des requêtes complexes de manière lisible, ce qui vous aide à comprendre le stream de votre requête. L'importance de la lisibilité pour les requêtes complexes ne peut être sous-estimée.
 
-**Utilisez le plan d'explication et comprenez les performances de votre requête**
+## Utilisez le plan d'explication et comprenez les performances de votre requête
 
 Le plan d'explication de l'optimiseur de requête vous montrera comment l'optimiseur de requête a déterminé sa requête optimale la moins coûteuse, les objets de base de données utilisés (tables, index, cache, etc.) et diverses statistiques de consommation de ressources et de performances à chaque étape de la requête.
 
@@ -92,18 +92,18 @@ Le plan d'explication de l'optimiseur de requête vous montrera comment l'optimi
 - Requêtes concurrentes susceptibles de provoquer des conflits de ressources dans votre base de données.
 - Nombre de connexions simultanées utilisées par rapport aux connexions disponibles. Les connexions simultanées sursouscrites peuvent avoir des effets négatifs sur vos utilisateurs qui peuvent ne pas être en mesure de se connecter à la base de données.
 
-**Éviter les analyses de table complètes**
+## Éviter les analyses de table complètes
 
 - En règle générale, vous ne devez interroger que les données dont vous avez besoin. Lorsque vous exécutezSELECT \*sans prédicats, vous parcourez l'intégralité de la table et récupérez chaque ligne et chaque colonne. Ceci est très inefficace en termes de performances et coûteux, en particulier si vous utilisez une base de données payante qui vous facture soit pour les octets analysés, soit pour les ressources de calcul utilisées pendant l'exécution d'une requête.
 - Dans une base de données orientée colonnes, vous devez sélectionner uniquement les colonnes dont vous avez besoin.
 
-**Tirer parti des résultats de requête mis en cache**
+## Tirer parti des résultats de requête mis en cache
 
 - Au lieu de réexécuter la même requête sur la base de données à plusieurs reprises et d'encourir des frais énormes, ne serait-il pas agréable que les résultats de la requête soient stockés et disponibles pour une récupération instantanée ? De nombreuses bases de données cloud OLAP mettent en cache les résultats des requêtes.
 
-**Requêtes sur les données en continu**
+## Requêtes sur les données en continu
 
-**L'approche du suiveur rapide**
+## L'approche du suiveur rapide
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.009.png" />
@@ -111,7 +111,7 @@ Le plan d'explication de l'optimiseur de requête vous montrera comment l'optimi
 
 Le modèle de requête CDC de base nous permet de fournir des analyses en temps réel avec un impact minimal sur le système de production. Le modèle suiveur rapide peut utiliser une base de données transactionnelle conventionnelle comme suiveur, mais l'utilisation d'un système orienté OLAP approprié présente des avantages significatifs.
 
-**L'architecture Kappa**
+## L'architecture Kappa
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.010.png" />
@@ -119,7 +119,7 @@ Le modèle de requête CDC de base nous permet de fournir des analyses en temps 
 
 Lorsque les bases de données d'application de production sont la source, l'architecture Kappa stocke les événements du CDC. Au lieu de simplement traiter un système de stockage en continu comme un tampon, l'architecture Kappa conserve les événements dans le stockage pendant une période de rétention plus longue, et les données peuvent être directement interrogées à partir de ce stockage. La période de conservation peut être assez longue (mois ou années). Notez que c'est beaucoup plus long que la période de rétention utilisée dans les systèmes orientés purement temps réel, généralement une semaine au maximum.
 
-**Windows, triggers, statistiques émises et données tardives Session window**
+## Windows, triggers, statistiques émises et données tardives Session window
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.011.png" />
@@ -127,7 +127,7 @@ Lorsque les bases de données d'application de production sont la source, l'arch
 
 *La fenêtre de session* regroupe les événements qui se produisent à proximité les uns des autres et filtre les périodes d'inactivité lorsque aucun événement ne se produit. Nous pourrions dire qu'une session utilisateur correspond à n'importe quel intervalle de temps sans intervalle d'inactivité de cinq minutes ou plus. Notre système collecte des données par une clé d'identification d'utilisateur, ordonne des événements, détermine les lacunes et les limites de session, et calcule des statistiques pour chaque session.
 
-**Fixed-time windows**
+## Fixed-time windows
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.012.png" />
@@ -135,7 +135,7 @@ Lorsque les bases de données d'application de production sont la source, l'arch
 
 *La fenêtre à temps fixe* comporte des périodes de temps fixes qui s'exécutent selon un calendrier fixe et traite toutes les données depuis la fermeture de la fenêtre précédente.
 
-**Sliding windows**
+## Sliding windows
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.013.png" />
@@ -143,7 +143,7 @@ Lorsque les bases de données d'application de production sont la source, l'arch
 
 Les événements dans une fenêtre glissante sont regroupées en fenêtres de durée fixe, où des fenêtres distinctes peuvent se chevaucher. Tout comme nous le faisions auparavant, nous pouvons émettre des statistiques moyennes et médianes.
 
-**Watermarks**
+## Watermarks
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.014.png" />
@@ -151,7 +151,7 @@ Les événements dans une fenêtre glissante sont regroupées en fenêtres de du
 
 Un watermark est un seuil utilisé par une fenêtre pour déterminer si les données d'une fenêtre se situent dans l'intervalle de temps établi ou si elles sont considérées comme en retard. Si des données arrivent qui sont nouvelles dans la fenêtre, mais plus anciennes que l'horodatage du watermark, elles sont considérées comme des données tardives.
 
-**Combiner des stream avec d'autres données Jointures de tables conventionnelles**
+## Combiner des stream avec d'autres données Jointures de tables conventionnelles
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.015.png" />
@@ -159,7 +159,7 @@ Un watermark est un seuil utilisé par une fenêtre pour déterminer si les donn
 
 Les tables peuvent être alimentées par des stream. L'approche la plus élémentaire de ce problème consiste simplement à joindre ces deux tables dans une base de données. Un stream peut alimenter l'une de ces tables ou les deux.
 
-**Enrichissement**
+## Enrichissement
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.016.png" />
@@ -167,7 +167,7 @@ Les tables peuvent être alimentées par des stream. L'approche la plus élémen
 
 *L'enrichissement* signifie que nous joignons un stream à d'autres données. En règle générale, cela est fait pour fournir des données améliorées dans un autre stream.
 
-**Rejoindre flux à flux**
+## Rejoindre flux à flux
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.017.png" />
@@ -175,7 +175,7 @@ Les tables peuvent être alimentées par des stream. L'approche la plus élémen
 
 Les architectures de jointure en continu typiques reposent sur des mémoire tampons. L'intervalle de rétention de la mémoire tampon est configurable ; un intervalle de conservation plus long nécessite plus de stockage et d'autres ressources. Les événements sont joints aux données dans la mémoire tampon et sont finalement supprimés une fois l'intervalle de rétention écoulé
 
-**La modélisation des données**
+## La modélisation des données
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.018.jpeg" />
@@ -183,11 +183,11 @@ Les architectures de jointure en continu typiques reposent sur des mémoire tamp
 
 La modélisation des données implique de choisir délibérément une structure cohérente pour les données et constitue une étape critique pour rendre les données utiles à l'entreprise.
 
-**Qu'est-ce qu'un modèle de données ?**
+## Qu'est-ce qu'un modèle de données ?
 
 Un *modèle de données* représente la façon dont les données se rapportent au monde réel. Il reflète la manière dont les données doivent être structurées et standardisées pour refléter au mieux les processus, les définitions, les workflows et la logique de votre organisation. Un bon modèle de données capture la façon dont la communication et le travail se déroulent naturellement au sein de votre organisation.
 
-**Modèles de données conceptuels, logiques et physiques**
+## Modèles de données conceptuels, logiques et physiques
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.019.png" />
@@ -202,7 +202,7 @@ Un *modèle de données* représente la façon dont les données se rapportent a
 
 En général, vous devez vous efforcer de modéliser vos données au niveau de grain le plus bas possible. À partir de là, il est facile d'agréger cet ensemble de données très granulaire. L'inverse n'est pas vrai et il est généralement impossible de restaurer les détails qui ont été agrégés.
 
-**Normalisation**
+## Normalisation
 
 *La normalisation* est une pratique de modélisation des données de base de données qui applique un contrôle strict sur les relations des tables et des colonnes au sein d'une base de données. Le but de la normalisation est de supprimer la redondance des données au sein d'une base de données et d'assurer l'intégrité référentielle. Fondamentalement, il *ne s'agit pas de vous répéter* (DRY) appliqué aux données d'une base de données.
 
@@ -231,9 +231,9 @@ La normalisation permet d’éviter des incohérence :
 - anomalie de mise à jour :
   - Si une données de référence est contenue dans plusieurs ligne d’une de table (adresse, ville, pays, auteur) elle devra être mise à jour sur toutes les lignes
 
-**Techniques de modélisation des données analytiques par lots**
+## Techniques de modélisation des données analytiques par lots
 
-**Inmon**
+## Inmon
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.020.png" />
@@ -257,7 +257,7 @@ Les données restent inchangées après leur stockage dans un entrepôt de donn�
 
 Différentes plages de temps peuvent être interrogées.
 
-**Kimball**
+## Kimball
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.021.jpeg" />
@@ -267,7 +267,7 @@ Le modèle Kimball est ascendant, vous encourageant à modéliser et à servir l
 
 Vous pouvez penser à une table *de faits* comme une table de nombres, et *les tables de dimension* comme données qualitatives référençant un fait.
 
-**Table de faits**
+## Table de faits
 
 Le premier type de table dans un schéma en étoile est la table de faits, qui contient des données *factuelles* , quantitatives et liées à des événements. Les données d'une table de faits sont immuables, car les faits sont liés à des événements. Par conséquent, les tables de faits ne changent pas et sont ajoutées uniquement. Les tables de faits sont généralement étroites et longues, ce qui signifie qu'elles n'ont pas beaucoup de colonnes, mais beaucoup de lignes qui représentent des événements. Les tables de faits doivent être au grain le plus bas possible.
 
@@ -277,7 +277,7 @@ Exemple de table de fait :
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.022.png" />
 </p>
 
-**Table de dimensions**
+## Table de dimensions
 
 Les tables de dimension fournissent les données de référence, les attributs et le contexte relationnel pour les événements stockés dans les tables de faits. Les tables de dimension sont plus petites que les tables de faits et prennent une forme opposée, généralement large et courte. Les dimensions sont dénormalisées, avec la possibilité de données en double. C'est OK dans le modèle de données Kimball.
 
@@ -319,7 +319,7 @@ Type 3 :
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.026.png" />
 </p>
 
-**Star schema**
+## Star schema
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.027.jpeg" />
@@ -333,7 +333,7 @@ Maintenant que vous avez une compréhension de base des faits et des dimensions,
 - Redondance de données peut causer des problèmes d'inconsistance
 - Pas adapté pour des cas de données normalisées
 
-**Snowflake schema**
+## Snowflake schema
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.028.jpeg" />
@@ -347,7 +347,7 @@ Le Snowflake schema est un modèle de conception de bases de données qui utilis
 - Plus complexe à comprendre pour les utilisateurs finaux
 - Requêtes plus complexes à écrire
 
-**Tables larges dénormalisées**
+## Tables larges dénormalisées
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.029.png" />
@@ -362,7 +362,7 @@ Raison :
 - Les requêtes analytiques sur des tables larges s'exécutent souvent plus rapidement que des requêtes équivalentes sur des données hautement normalisées nécessitant de nombreuses jointures.
 - La suppression des jointures peut avoir un impact considérable sur les performances d'analyse.
 
-**Transformations**
+## Transformations
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.030.png" />
@@ -372,15 +372,15 @@ Une transformation diffère d'une requête. Une *requête* récupère les donné
 
 Les transformations reposent essentiellement sur l'un des principaux courants sous-jacents de ce livre : l'orchestration. L'orchestration combine de nombreuses opérations discrètes, telles que des transformations intermédiaires, qui stockent des données de manière temporaire ou permanente pour être consommées par des transformations ou des services en aval. De plus en plus, les pipelines de transformation couvrent non seulement plusieurs tables et ensembles de données, mais également plusieurs systèmes.
 
-**Transformations par lots**
+## Transformations par lots
 
 *Les transformations par lots* sont exécutées sur des blocs de données discrets, contrairement aux transformations en continu, où les données sont traitées en continu à mesure qu'elles arrivent. Les transformations par lots peuvent s'exécuter selon un calendrier fixe (par exemple, quotidiennement, toutes les heures ou toutes les 15 minutes)
 
-**Distributed joins**
+## Distributed joins
 
 L'idée de base derrière les jointures distribuées est que nous devons diviser une *jointure logique* (la jointure définie par la logique de requête) en *jointures de nœuds* beaucoup plus petites qui s'exécutent sur des serveurs individuels du cluster.
 
-**Broadcast join**
+## Broadcast join
 
 Une *jointure de diffusion* est généralement asymétrique, avec une grande table répartie sur les nœuds et une petite table qui peut facilement tenir sur un seul nœud. Le moteur de requête "diffuse" la petite table (table A) à tous les nœuds, où elle est jointe aux parties de la grande table (table B). Les jointures de diffusion sont beaucoup moins gourmandes en calcul que les jointures de hachage aléatoires.
 
@@ -388,7 +388,7 @@ Une *jointure de diffusion* est généralement asymétrique, avec une grande tab
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.031.jpeg" />
 </p>
 
-**Shuffle hash join**
+## Shuffle hash join
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.032.jpeg" />
@@ -398,7 +398,7 @@ Si aucune table n'est assez petite pour tenir sur un seul nœud, le moteur de re
 
 Dans cet exemple, le schéma de hachage divisera la clé de jointure en trois parties, chaque partie étant affectée à un nœud. Les données sont ensuite réorganisées vers le nœud approprié et les nouvelles partitions des tables A et B sur chaque nœud sont jointes. Les jointures de hachage aléatoires sont généralement plus gourmandes en ressources que les jointures de diffusion.
 
-**MapReduce**
+## MapReduce
 
 MapReduce était le modèle de transformation de données par lots déterminant de l'ère du Big Data, il influence encore aujourd'hui de nombreux ingénieurs de données de systèmes distribués, et il est utile que les ingénieurs de données comprennent à un niveau de base.<p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.033.png" />
@@ -413,9 +413,9 @@ La première étape, "map", permet de transformer les données en entrée en un 
 - Difficulté à gérer les tâches de traitement qui ne peuvent pas être décomposées en étapes de map et reduce.
 - Nécessité d'utiliser un système de fichiers distribué pour stocker les données, ce qui peut augmenter les coûts.
 
-**Vues matérialisées, fédération et virtualisation des requêtes**
+## Vues matérialisées, fédération et virtualisation des requêtes
 
-**Vues**
+## Vues
 
 <p align="center">
   <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.034.jpeg" />
@@ -427,7 +427,7 @@ Une *vue* est un objet de base de données que nous pouvons sélectionner comme 
 - Une vue peut être utilisée pour fournir une image dédupliquée actuelle des données. Si nous utilisons un modèle d'insertion uniquement, une vue peut être utilisée pour renvoyer une version dédupliquée d'une table affichant uniquement la dernière version de chaque enregistrement.
 - Les vues peuvent être utilisées pour présenter des modèles d'accès aux données courants. Supposons que les analystes marketing doivent fréquemment exécuter une requête qui joint cinq tables. Nous pourrions créer une vue qui réunit ces cinq tables en une table large. Les analystes peuvent ensuite rédiger des requêtes qui filtrent et agrègent au-dessus de cette vue.
 
-**Vues matérialisées**
+## Vues matérialisées
 
 Les vues et les vues matérialisées sont similaires en ce qu'elles permettent aux utilisateurs de visualiser et d'interagir avec les données d'une base de données de manière simplifiée. Cependant, il existe des différences clés entre les deux :
 
@@ -436,7 +436,7 @@ Les vues et les vues matérialisées sont similaires en ce qu'elles permettent a
 - Performance : Les vues peuvent avoir une performance inférieure aux vues matérialisées car les requêtes sur les vues doivent être traduites en requêtes sur les tables de base de données sous-jacentes. Les vues matérialisées, étant stockées physiquement, sont généralement plus rapides car les données sont déjà disponibles.
 - Utilisation : Les vues sont souvent utilisées pour masquer les détails de la structure de la base de données sous-jacente, ce qui facilite la maintenance et la sécurité des données. Les vues matérialisées sont utilisées pour améliorer les performances des requêtes récurrentes sur des jeux de données volumineux.
 
-**Requêtes fédérées**
+## Requêtes fédérées
 
 *Les requêtes fédérées* sont une fonctionnalité de base de données qui permet à une base de données OLAP de sélectionner une source de données externe, telle qu'un stockage d'objets ou un SGBDR.
 

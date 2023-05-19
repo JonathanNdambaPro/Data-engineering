@@ -4,7 +4,7 @@
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.001.png" />
 </p>
 
-**Qu'est-ce que l'ingestion de données ?**
+## Qu'est-ce que l'ingestion de données ?
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.002.png" />
@@ -17,9 +17,9 @@ Cela vaut la peine de comparer rapidement l'ingestion de données avecintégrati
 - *l'ingestion* de données est un mouvement de données d'un point A à un point B.
 - *l'intégration* de données combine des données provenant de sources disparates dans un nouvel ensemble de données.
 
-**Considérations techniques clés pour la phase d'ingestion**
+## Considérations techniques clés pour la phase d'ingestion
 
-**Données limitées versus données illimitées**
+## Données limitées versus données illimitées
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.003.jpeg" />
@@ -28,7 +28,7 @@ Cela vaut la peine de comparer rapidement l'ingestion de données avecintégrati
 - *Les données illimitées* sont des données telles qu'elles existent dans la réalité, au fur et à mesure que des événements se produisent, sporadiquement ou continuellement, en cours et en continu.
 - *Les données délimitées* sont un moyen pratique de répartir les données sur une sorte de limite, telle que le temps.
 
-**La fréquence**
+## La fréquence
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.004.png" />
@@ -38,7 +38,7 @@ Les fréquences d'ingestion varient considérablement de lentes à rapides, une 
 
 On parle de temps réel, mais dans la réalité, on est plus sûr du presque temps-réel (near real-time) car on inclut le transport et les transformations s'il y en a.
 
-**Ingestion synchrone ou asynchrone**
+## Ingestion synchrone ou asynchrone
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.005.png" />
@@ -52,11 +52,11 @@ Avec *ingestion synchrone* , la source, l'ingestion et la destination ont des d�
 
 Avec *l'ingestion asynchrone* , les dépendances peuvent désormais fonctionner au niveau des événements individuels, comme elles le feraient dans un backend logiciel construit à partir de microservices. Les événements individuels deviennent disponibles dans le stockage dès qu'ils sont ingérés individuellement.
 
-**Sérialisation et désérialisation**
+## Sérialisation et désérialisation
 
 En mouvementles données de la source à la destination impliquent la sérialisation et la désérialisation. Pour rappel, la *sérialisation* consiste à encoder les données d'une source et à préparer les structures de données pour les étapes de transmission et de stockage intermédiaire.
 
-**Scalabilité**
+## Scalabilité
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.007.png" />
@@ -64,19 +64,19 @@ En mouvementles données de la source à la destination impliquent la sérialisa
 
 En théorie, votre ingestion ne devrait jamais être un goulot d'étranglement. En pratique, les goulots d'étranglement d'ingestion sont assez courants. Le débit de données et la scalabilité du système deviennent critiques à mesure que vos volumes de données augmentent et que les exigences changent. Concevez vos systèmes pour qu'ils évoluent et se réduisent afin de s'adapter de manière flexible au débit de données souhaité.
 
-**Fiabilité et durabilité**
+## Fiabilité et durabilité
 
 Fiabilité et durabilité sont essentiels dans les étapes d'ingestion des pipelines de données. *La fiabilité* implique une disponibilité élevée et un basculement approprié pour les systèmes d'ingestion. *La durabilité* implique de s'assurer que les données ne sont pas perdues ou corrompues.
 
-**Payload**
+## Payload
 
 Un payload est l'ensemble de données que vous ingérez et possède des caractéristiques telles que le type, la forme, la taille, le schéma et les types de données, et les métadonnées.
 
-**Type**
+## Type
 
 Les données ont un type : tabulaire, image, vidéo, texte, etc. Le type influence directement le format des données ou la manière dont elles sont exprimées en octets, noms et extensions de fichier. Par exemple, un type de données tabulaires peut être dans des formats tels que CSV ou Parquet, chacun de ces formats ayant des modèles d'octets différents pour la sérialisation et la désérialisation. Un autre type de données est une image, qui a un format JPG ou PNG et est intrinsèquement non structurée.
 
-**Shape**
+## Shape
 
 La forme des données est essentielle tout au long du cycle de vie de l'ingénierie des données. Par exemple, les dimensions pixel et rouge, vert, bleu (RVB) d'une image sont nécessaires pour former des modèles d'apprentissage en profondeur. Comme autre exemple, si vous essayez d'importer un fichier CSV dans une table de base de données et que votre CSV a plus de colonnes que la table de base de données, vous obtiendrez probablement une erreur lors du processus d'importation.
 
@@ -100,15 +100,15 @@ La largeur, la hauteur et la profondeur de couleur RVB (par exemple, 8 bits par 
 
 Nombre de canaux (par exemple, deux pour la stéréo), profondeur d'échantillonnage (par exemple, 16 bits par échantillon), fréquence d'échantillonnage (par exemple, 48 kHz) et durée (par exemple, 10 003 secondes)
 
-**Size**
+## Size
 
 La *taille* des données décrit le nombre d'octets. Pour réduire la taille d'un payload, elle peut être compressée dans divers formats tels que ZIP et TAR
 
-**Schema and data types**
+## Schema and data types
 
 un schéma décrit les champs et les types de données dans ces champs. D'autres données, telles que du texte non structuré, des images et de l'audio, n'auront pas de schéma ou de types de données explicites.
 
-**Détecter et gérer les changements de schéma en amont et en aval**
+## Détecter et gérer les changements de schéma en amont et en aval
 
 - Ajout d'une nouvelle colonne
 - Changer un type de colonne
@@ -117,11 +117,11 @@ un schéma décrit les champs et les types de données dans ces champs. D'autres
 
 Les modifications de schéma peuvent toujours interrompre les pipelines en aval de la préproduction et de l'ingestion. Les ingénieurs doivent toujours mettre en œuvre des stratégies pour répondre automatiquement aux changements et alerter sur les changements qui ne peuvent pas être pris en charge automatiquement.
 
-**Métadonnées**
+## Métadonnées
 
 Les métadonnées sont des données sur les données. Les métadonnées peuvent être aussi critiques que les données elles-mêmes. Sans une description détaillée des données, elles peuvent être de peu de valeur.
 
-**Push Versus Pull Versus Poll Patterns**
+## Push Versus Pull Versus Poll Patterns
 
 Une stratégie *push* implique qu'un système source envoie des données à une cible, tandis qu'une stratégie *pull* implique qu'une cible lit les données directement à partir d'une source. Les frontières entre ces stratégies sont floues.
 
@@ -139,7 +139,7 @@ Une autre pattern consiste à demander à la source à partir de la destination 
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.010.png" />
 </p>
 
-**Considérations sur l'ingestion par batch**
+## Considérations sur l'ingestion par batch
 
 L'ingestion par lots, qui implique le traitement de données en bloc, est souvent un moyen pratique d'ingérer des données. Cela signifie que les données sont ingérées en prenant un sous-ensemble de données d'un système source, en fonction d'un intervalle de temps ou de la taille des données accumulées
 
@@ -155,7 +155,7 @@ L'ingestion par lots, qui implique le traitement de données en bloc, est souven
 
 *L'ingestion de lots basée sur la taille* est assez courante lorsque les données sont déplacées d'un système basé sur le streaming vers un stockage d'objets ; en fin de compte, vous devez découper les données en blocs discrets pour un traitement futur dans un lac de données. Certains systèmes d'ingestion basés sur la taille peuvent diviser les données en objets en fonction de divers critères, tels que la taille en octets du nombre total d'événements.
 
-**Snapshot ou extraction différentielle**
+## Snapshot ou extraction différentielle
 
 Ingénieurs de données doivent choisir de capturer des snapshot (instantanés complets) d'un système source ou différentiel
 
@@ -169,7 +169,7 @@ Les ingénieurs ne peuvent extraire que les mises à jour et les modifications d
 
 Alors que les mises à jour différentielles sont idéales pour minimiser le trafic réseau et l'utilisation du stockage cible, les lectures complètes d'instantanés restent extrêmement courantes en raison de leur simplicité.
 
-**Exportation et ingestion basées sur des fichiers**
+## Exportation et ingestion basées sur des fichiers
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.013.png" />
@@ -183,7 +183,7 @@ Avec l'ingestion basée sur les fichiers, les processus d'exportation sont exéc
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.014.jpeg" />
 </p>**
 
-**Migration de données**
+## Migration de données
 
 La migration de données est le processus de transférer toutes les données d'une source à une autre, généralement d'une base de données ou d'un système de stockage à un autre. Les avantages de la migration de données comprennent :
 
@@ -199,9 +199,9 @@ La migration de données est le processus de transférer toutes les données d'u
 
 Les migrations de données ne sont probablement pas courantes en tant qu'ingénieur de données, mais vous devez les connaître.
 
-**Considérations sur l'ingestion de messages et de streaming**
+## Considérations sur l'ingestion de messages et de streaming
 
-**Évolution du schéma**
+## Évolution du schéma
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.015.png" />
@@ -213,13 +213,13 @@ Les migrations de données ne sont probablement pas courantes en tant qu'ingéni
 - Une file d'attente de lettres mortes peut vous aider à enquêter sur les problèmes liés aux événements qui ne sont pas correctement gérés
 - Communiquer régulièrement avec les parties prenantes en amont sur les changements de schéma potentiels et à traiter de manière proactive les changements de schéma avec les équipes introduisant ces changements au lieu de réagir au destinataire des changements avec rupture
 
-**Données tardives**
+## Données tardives
 
 Un groupe d'événements peut se produire à peu près au même moment (heures d'événements similaires), mais certains peuvent arriver plus tard que d'autres (heures d'ingestion tardives) en raison de diverses circonstance
 
 Pour gérer les données tardives, vous devez définir une heure limite à laquelle les données tardives ne seront plus traitées.
 
-**Replay**
+## Replay
 
 *Le replay* permet aux lecteurs de demander une série de messages de l'historique, ce qui vous permet de revenir en arrière dans l'historique de vos événements jusqu'à un point particulier dans le temps.
 
@@ -230,7 +230,7 @@ Par exemple :
 - RabbitMQ supprime généralement les messages une fois que tous les abonnés les ont consommés.
 - Kafka, Kinesis et Pub/Sub prennent tous en charge la conservation et la relecture des événements.
 
-**Time to Live (TTL)**
+## Time to Live (TTL)
 
 Combien de temps conserverez-vous votre dossier d'événement ? Le TTL est généralement une configuration que vous définissez pendant combien de temps vous voulez que les événements vivent avant qu'ils ne soient reconnus et ingérés. Tout événement non reconnu qui n'est pas ingéré après l'expiration de sa durée de vie disparaît automatiquement.
 
@@ -240,7 +240,7 @@ Un TTL extrêmement court (millisecondes ou secondes) peut entraîner la dispari
 
 Une durée de vie très longue (plusieurs semaines ou mois) créera un arriéré de nombreux messages non traités, ce qui entraînera de longs temps d'attente
 
-**Taille des messages**
+## Taille des messages
 
 Vous devez vous assurer que le framework de streaming en question peut gérer la taille de message maximale attendue.
 
@@ -249,7 +249,7 @@ Exemple :
 - Amazon Kinesis prend en charge une taille de message maximale de 1 Mo
 - Kafka utilise par défaut cette taille maximale mais peut être configuré pour un maximum de 20 Mo ou plus
 
-**Gestion des erreurs et files d'attente de lettres mortes**
+## Gestion des erreurs et files d'attente de lettres mortes
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.016.png" />
@@ -259,13 +259,13 @@ Les événements qui ne peuvent pas être ingérés doivent être redirigés et 
 
 Une file d'attente de lettres mortes sépare les événements problématiques des événements pouvant être acceptés par le consommateur. Si les événements ne sont pas redirigés vers une file d'attente de lettres mortes, ces événements erronés risquent d'empêcher l'ingestion d'autres messages
 
-**Location**
+## Location
 
 Il est souvent souhaitable d'intégrer le streaming sur plusieurs sites pour une redondance améliorée et de consommer les données à proximité de l'endroit où elles sont générées. En règle générale, plus votre ingestion est proche de l'origine des données, meilleures sont votre bande passante et votre latence.
 
-**Façons d'ingérer des données**
+## Façons d'ingérer des données
 
-**Connexion directe à la base de données**
+## Connexion directe à la base de données
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.017.png" />
@@ -298,19 +298,19 @@ ODBC (Open Database Connectivity) est un standard de programmation pour l'accès
 
 JDBC est conceptuellement remarquablement similaire à ODBC. De nombreuses bases de données prennent désormais en charge l'exportation de fichiers natifs qui contourne JDBC/ODBC et exporte les données directement dans des formats tels que Parquet, ORC et Avro. Alternativement, de nombreux entrepôts de données cloud fournissent des API REST directes.
 
-**Change Data Capture**
+## Change Data Capture
 
-**CDC orienté batch**
+## CDC orienté batch
 
 Si la table de base de données en question a un champ contenant la dernière fois qu'un enregistrement a été écrit ou mis à jour, nous pouvons interroger la table pour trouver toutes les lignes mises à jour depuis une heure spécifiée. Ce processus nous permet d'extraire les modifications et de mettre à jour de manière différentielle une table cible.
 
-**CDC continu**
+## CDC continu
 
 Plutôt que d'exécuter des requêtes périodiques pour obtenir un lot de modifications de table, le CDC continu traite chaque écriture dans la base de données comme un événement.
 
 Le journal binaire de la base de données enregistre chaque modification de la base de données de manière séquentielle. Un outil CDC peut lire ce journal et envoyer les événements à une cible, telle que la plateforme de streaming Apache Kafka.
 
-**Apis**
+## Apis
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.018.png" />
@@ -322,7 +322,7 @@ Il n'existe aucune norme appropriée pour l'échange de données via les API. Le
 - De nombreuses plates-formes de connecteurs de données sont désormais disponibles en tant que SaaS, open source ou open source gérée. Ces plates-formes fournissent une connectivité de données clé en main à de nombreuses sources de données ;
 - L'émergence du partage de données, c'est-à-dire la possibilité d'échanger des données via une plate-forme standard telle que BigQuery, Snowflake, Redshift ou S3.
 
-**Message Queues and Event-Streaming Platforms**
+## Message Queues and Event-Streaming Platforms
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.019.png" />
@@ -337,7 +337,7 @@ Une autre considération est le débit de vos pipelines de données en temps ré
 - Fournir suffisamment de ressources de mémoire, de disque et de processeur pour le traitement des événements
 - Intégrez la mise à l'échelle automatique pour gérer les pics et économiser de l'argent à mesure que la charge diminue
 
-**Connecteurs de données gérés**
+## Connecteurs de données gérés
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.020.jpeg" />
@@ -349,7 +349,7 @@ Le fournisseur ou le cloud en coulisse gère et surveille entièrement les synch
 
 Les fournisseurs et les projets OSS ont chacun généralement des centaines d'options de connecteurs prédéfinis et peuvent facilement créer des connecteurs personnalisés.
 
-**Déplacer des données avec le stockage d'objets**
+## Déplacer des données avec le stockage d'objets
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.021.jpeg" />
@@ -357,7 +357,7 @@ Les fournisseurs et les projets OSS ont chacun généralement des centaines d'op
 
 Stockage d'objets est un système mutualisé dans des clouds publics, et il prend en charge le stockage d'énormes quantités de données. Cela rend le stockage d'objets idéal pour déplacer des données dans et hors des data lakes entre équipes et transférer des données entre organisations. Vous pouvez même fournir un accès à court terme à un objet avec une URL signée, donnant à un utilisateur une autorisation temporaire.
 
-**EDI (electronic data interchange)**
+## EDI (electronic data interchange)
 
 Généralement des moyens quelque peu archaïques d'échange de fichiers, tels que par<p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.022.jpeg" />
@@ -365,7 +365,7 @@ Généralement des moyens quelque peu archaïques d'échange de fichiers, tels q
 
 Les ingénieurs peuvent au moins améliorer l'EDI grâce à l'automatisation.
 
-**Bases de données et exportation de fichiers**
+## Bases de données et exportation de fichiers
 
 Les ingénieurs doivent savoir comment les systèmes de base de données source gèrent l'exportation de fichiers. L'exportation implique des analyses de données volumineuses qui chargent considérablement la base de données pour de nombreux systèmes transactionnels.
 
@@ -373,7 +373,7 @@ Les requêtes d'exportation peuvent être divisées en exportations plus petites
 
 Les principaux entrepôts de données cloud sont hautement optimisés pour l'exportation directe de fichiers. Par exemple, Snowflake, BigQuery, Redshift et d'autres prennent en charge l'exportation directe vers le stockage d'objets dans divers formats.
 
-**Problèmes pratiques avec les formats de fichiers courants**
+## Problèmes pratiques avec les formats de fichiers courants
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.023.png" />
@@ -387,7 +387,7 @@ CSV n'encode pas non plus nativement les informations de schéma ou ne prend pas
 
 Les formats d'exportation plus robustes et expressifs incluent Parquet, Avro, Arrow et ORC ou JSON. Ces formats encodent nativement les informations de schéma et gèrent des données de chaîne arbitraires sans intervention particulière. Beaucoup d'entre eux gèrent également les structures de données imbriquées de manière native afin que les champs JSON soient stockés à l'aide de structures imbriquées internes plutôt que de simples chaînes.
 
-**SSH**
+## SSH
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.024.png" />
@@ -398,7 +398,7 @@ SSH (Secure Shell) est un protocole de réseau qui permet de se connecter à un 
 - SSH peut être utilisé pour le transfert de fichiers avec SCP
 - les tunnels SSH sont utilisés pour permettre des connexions sécurisées et isolées aux bases de données
 
-**SFTP et SCP**
+## SFTP et SCP
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.025.jpeg" />
@@ -409,7 +409,7 @@ SFTP et SCP sont tous les deux des protocoles de transfert de fichiers qui repos
 - SFTP (Secure File Transfer Protocol) est un protocole de transfert de fichiers qui permet de transférer des fichiers de manière sécurisée entre des ordinateurs distants, en utilisant des mécanismes de chiffrement pour protéger les données. Il permet également de naviguer dans les répertoires distants, de créer, supprimer, renommer des répertoires et des fichiers. Il est souvent utilisé pour transférer des fichiers vers et à partir de serveurs distants.
 - SCP (Secure Copy Protocol) est un protocole de transfert de fichiers qui permet de copier des fichiers de manière sécurisée entre des ordinateurs distants, en utilisant des mécanismes de chiffrement pour protéger les données. Il ne permet pas de naviguer dans les répertoires distants, ni de créer, supprimer, renommer des répertoires et des fichiers. Il est souvent utilisé pour copier des fichiers vers et à partir de serveurs distants.
 
-**Webhooks**
+## Webhooks
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.026.jpeg" />
@@ -421,7 +421,7 @@ Comme vu précédemment, les webhooks contrairement à l'api envoie les données
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.027.png" />
 </p>
 
-**Transfer Appliances for Data Migration**
+## Transfer Appliances for Data Migration
 
 <p align="center">
   <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.028.png" />

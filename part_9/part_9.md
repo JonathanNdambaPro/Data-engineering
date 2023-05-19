@@ -4,9 +4,9 @@
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.001.png" />
 </p>
 
-**Considérations générales pour la diffusion de données**
+## Considérations générales pour la diffusion de données
 
-**Confiance**
+## Confiance
 
 <p align="center">
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.002.jpeg" />
@@ -35,7 +35,7 @@ Un contrat de niveau d'objectif (SLO, pour Service Level Objective) est un sous-
 
 Alors qu'un SLA est un document formel qui définit les niveaux de service attendus pour un service de données, un SLO est plus spécifique et se concentre sur les objectifs de performance pour un sous-ensemble particulier du service. Il peut inclure des éléments tels que la disponibilité, la latence, la vitesse de traitement, la récupération après sinistre, la sécurité et la confidentialité des données.
 
-**Quel est le cas d'utilisation et qui est l'utilisateur ?**
+## Quel est le cas d'utilisation et qui est l'utilisateur ?
 
 Lorsque vous démarrez un nouveau projet de données, il est utile de revenir en arrière. Bien qu'il soit tentant de se concentrer sur les outils, nous vous encourageons à commencer par le cas d'utilisation et les utilisateurs.
 
@@ -45,7 +45,7 @@ Voici quelques questions à vous poser avant de commencer :
 - Qu'attendent les parties prenantes ?
 - Comment puis-je collaborer avec les parties prenantes des données (par exemple, les scientifiques des données, les analystes, les utilisateurs métier) pour comprendre comment les données avec lesquelles je travaille seront utilisées ?
 
-**Produits de données**
+## Produits de données
 
 <p align="center">
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.004.jpeg" />
@@ -57,7 +57,7 @@ Lors de la création d'un produit de données, gardez ces considérations à l'e
 - Le produit de données servira-t-il des utilisateurs internes ou externes ? Lors de la création d'un produit de données, savoir si votre client est interne ou externe aura un impact sur la manière dont les données sont servies.
 - Quels sont les résultats et le retour sur investissement du produit de données que vous créez ?
 
-**Self-service ou non ?**
+## Self-service ou non ?
 
 Le self-service de données est une approche qui permet aux utilisateurs de gérer et d'exploiter les données par eux-mêmes, sans avoir à passer par un département informatique ou une équipe de données dédiée. Cela peut inclure des fonctionnalités telles que la découverte de données, l'analyse de données, la visualisation de données et la création de rapports.
 
@@ -70,7 +70,7 @@ Le self-service de données est une approche qui permet aux utilisateurs de gér
 
 Les produits de données en libre-service, qui donnent à l'utilisateur la possibilité de créer lui-même des produits de données, sont une aspiration commune des utilisateurs de données depuis de nombreuses années. Quoi de mieux que de simplement donner à l'utilisateur final la possibilité de créer directement des rapports, des analyses et des modèles de ML ? Bien que nous voyions parfois des entreprises réussir le libre-service avec des données, cela est rare. La plupart du temps, les tentatives de données en libre-service commencent avec de grandes intentions, mais finissent par échouer ; les données en libre-service sont difficiles à mettre en œuvre dans la pratique.
 
-**Définitions des données et logique**
+## Définitions des données et logique
 
 <p align="center">
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.005.jpeg" />
@@ -86,9 +86,9 @@ Les entreprises ont tendance à les transmettre de manière non formelle, mais i
 - Analyse
 - Machine learning
 
-**Analytique**
+## Analytique
 
-**Analytique commerciale**
+## Analytique commerciale
 
 Consiste à l’utilisations *de l'analyse commerciale des* données historiques et actuelles pour prendre des décisions stratégiques et exploitables. Les types de décisions ont tendance à prendre en compte les tendances à plus long terme et impliquent souvent une combinaison d'analyses statistiques et de tendances, ainsi que l'expertise du domaine et le jugement humain. L'analyse d'entreprise est autant un art qu'une science.
 
@@ -106,7 +106,7 @@ Les analystes sont souvent chargés par les parties prenantes de l'entreprise de
 
 Les rapports commencent généralement par des demandes ad hoc. Si les résultats de l'analyse ad hoc ont un impact, ils se retrouvent souvent dans un rapport ou un tableau de bord
 
-**Analytique opérationnelle**
+## Analytique opérationnelle
 
 <p align="center">
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.007.jpeg" />
@@ -122,7 +122,7 @@ Exemple :
 
 - La surveillance des applications en temps réel. De nombreuses équipes d'ingénierie logicielle souhaitent connaître les performances de leur application. Si des problèmes surviennent, ils veulent être informés immédiatement.
 
-**Analytique intégrée**
+## Analytique intégrée
 
 Alors que les analyses commerciales et opérationnelles sont axées sur l'interne, une tendance récente est l'analyse externe ou intégrée. Les entreprises fournissent de plus en plus d'analyses aux utilisateurs finaux.
 
@@ -137,7 +137,7 @@ Considération :
 - Les utilisateurs d'applications de données s'attendent à *performances des requêtes*
 - Les applications de données doivent souvent prendre en charge des taux de requête extrêmement élevés sur de nombreux tableaux de bord et de nombreux clients. La haute concurrence est essentielle.
 
-**Machine learning**
+## Machine learning
 
 **Ce qu'un ingénieur de données doit savoir sur le ML<p align="center">
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.008.jpeg" />
@@ -163,9 +163,9 @@ Considération :
 - Les résultats sont-ils renvoyés en temps réel ou par lots ? Par exemple, un modèle de transcription vocale par lots peut traiter des échantillons de parole et renvoyer du texte par lots après un appel d'API. Un modèle de recommandation de produit peut devoir fonctionner en temps réel lorsque le client interagit avec un site de vente au détail en ligne.
 - L'utilisation de données structurées versus non structurées. Nous pouvons regrouper des données client tabulaires (structurées) ou reconnaître des images (non structurées) en utilisant un réseau neuronal.
 
-**Façons de servir des données pour l'analyse et le ML**
+## Façons de servir des données pour l'analyse et le ML
 
-**Échange de fichiers**
+## Échange de fichiers
 
 <p align="center">
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.010.jpeg" />
@@ -187,7 +187,7 @@ Le fichier le plus simple à servir est quelque chose comme l'envoi par courrier
 
 Bien sûr, il est difficile d'adapter le service de fichiers uniques et vos besoins finiront par dépasser le simple stockage de fichiers dans le cloud. Vous deviendrez probablement un bucket de stockage d'objets si vous avez une poignée de fichiers volumineux, ou un lac de données si vous disposez d'un approvisionnement régulier en fichiers.
 
-**Bases de données**
+## Bases de données
 
 <p align="center">
   <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.011.jpeg" />
@@ -200,6 +200,6 @@ Les Bases de données sont une couche critique dans le service des données pour
 
 Les ingénieurs de données sont assez souvent chargés de gérer la couche de service de base de données. Cela inclut la gestion des performances et des coûts.
 
-**Système Streaming**
+## Système Streaming
 
 Analyse de fluxsont de plus en plus importants dans le domaine du service.

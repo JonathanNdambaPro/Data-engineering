@@ -10,11 +10,11 @@ Le stockage est la partie du cycle de la data engineering qui intervient dans to
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.002.jpeg" />
 </p>
 
-**Ingrédients bruts du stockage de données**
+## Ingrédients bruts du stockage de données
 
 Analysons les “Raw ingrédient”
 
-**Magnetic Disk Drive (Lecteur de disque magnétique)**
+## Magnetic Disk Drive (Lecteur de disque magnétique)
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.003.jpeg" />
@@ -33,7 +33,7 @@ Considération :
 - Consommation électrique : Les disques durs consomment plus d'énergie que les autres types de dispositifs de stockage.
 - Bruit : Les disques durs peuvent émettre un bruit audible lorsqu'ils tournent, ce qui peut être gênant pour certains utilisateurs.
 
-**Solid-State Drive (SSD)**
+## Solid-State Drive (SSD)
 
 Les SSD stockent les données sous forme de charges dans des cellules de mémoire flash. Les SSD éliminent les composants mécaniques des disques magnétiques ; les données sont lues par des moyens purement électroniques.
 
@@ -48,7 +48,7 @@ Considération :
 - Durée de vie limitée : Les SSD ont une durée de vie limitée en termes de cycles d'écriture/lecture, ce qui signifie qu'ils ne peuvent pas être utilisés indéfiniment.
 - Perte de données : Les données stockées sur un SSD peuvent être perdues si le dispositif est endommagé ou s'il perd de l'alimentation, donc il est recommandé de faire des sauvegardes régulières.
 
-**Random Access Memory (RAM)**
+## Random Access Memory (RAM)
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.004.png" />
@@ -65,7 +65,7 @@ Caractéristique :
 - *Il est limité*
 - *Il est nettement plus lent que le cache CPU,*
 
-**Le cache CPU (ou mémoire cache)**
+## Le cache CPU (ou mémoire cache)
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.005.png" />
@@ -81,7 +81,7 @@ Caractéristique :
 
 *La différence entre le cache CPU et la RAM est que le cache CPU est un type de mémoire tampon utilisé pour stocker temporairement les données les plus fréquemment utilisées par le processeur, tandis que la RAM est utilisée pour stocker temporairement les données utilisées par les programmes en cours d'exécution. Le cache CPU est plus rapide que la RAM, mais il a une capacité de stockage beaucoup plus limitée. La RAM est plus lente que le cache CPU, mais elle a une capacité de stockage beaucoup plus importante.*
 
-**Un processeur (CPU pour Central Processing Unit)**
+## Un processeur (CPU pour Central Processing Unit)
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.006.png" />
@@ -91,7 +91,7 @@ Un processeur (ou CPU pour Central Processing Unit) est le composant principal d
 
 S'il y a une chose à retenir, c’est que plus un composant mémoire est proche du CPU, plus, il est rapide en lecture/écriture, mais souvent plus cher et limité en capacité de stockage.
 
-**Mémoire pour le data engineer.**
+## Mémoire pour le data engineer.
 
 Lors de déploiement d’outils big data distribué, la sélection de composants mémoire sera votre responsabilité. Par exemple, si vous êtes dans un cas où la latence doit être faible, vous devriez vous pencher vers une solution SSD plutôt que HDD en sachant également que plus un processeur à de core plus il a de mémoire cache. La RAM aussi est importante, l’application sera donc beaucoup plus rapide, mais le coût est également plus élevé, il faudra donc trouver le bon compromis.
 
@@ -99,7 +99,7 @@ Lors de déploiement d’outils big data distribué, la sélection de composants
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.007.jpeg" />
 </p>
 
-**Sérialisation**
+## Sérialisation
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.008.jpeg" />
@@ -117,7 +117,7 @@ Le type de sérialisation choisit à un impact notable pour les étapes en amont
 
 place. Les bases de données en colonnes organisent les données en fichiers de colonnes pour optimiser une compression hautement efficace et prendre en charge des analyses rapides de gros volumes de données. Chaque choix de sérialisation s'accompagne d'un ensemble de compromis, et les ingénieurs de données ajustent ces choix pour optimiser les performances en fonction des besoins.
 
-**Compression**
+## Compression
 
 *La compression* est un autre élément essentiel de l'ingénierie du stockage. À la base, la compression réduit la taille des données, mais les algorithmes de compression interagissent avec d'autres détails des systèmes de stockage de manière complexe.
 
@@ -127,11 +127,11 @@ Une compression hautement efficace présente trois avantages principaux dans les
 - la compression augmente la vitesse d'analyse pratique par disque
 - Le troisième avantage réside dans les performances du réseau. Étant donné qu'une connexion réseau entre une instance Amazon EC2 et S3 fournit 10 gigabits par seconde (Gbps) de bande passante, un taux de compression de 10:1 augmente la bande passante réseau effective à 100 Gbps
 
-**Systèmes de stockage de données**
+## Systèmes de stockage de données
 
 Passons au “Storage Sytems”
 
-**Machine unique versus stockage distribué**
+## Machine unique versus stockage distribué
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.010.png" />
@@ -145,7 +145,7 @@ La scalabilité horizontale permet d’augmenter les performance de manière “
 
 La scalabilité verticale est simple à mettre en place (achat d’une machine plus puissante) mais ne peut pas évoluer à l’infini” et si la machine casse tout est perdu
 
-**Cohérence éventuelle versus forte**
+## Cohérence éventuelle versus forte
 
 Comment ce système assure-t-il la cohérence des données ? Malheureusement, les systèmes distribués posent un dilemme pour le stockage et la précision des requêtes. Il faut du temps pour répliquer les modifications sur les nœuds d'un système ; il existe souvent un équilibre entre l'obtention de données actuelles et l'obtention de données « en quelque sorte » actuelles dans une base de données distribuée.
 
@@ -167,7 +167,7 @@ Dans ce cas de figure, les données utilisent ce qu’on appelle le système BAS
 
 *Le contraire de la cohérence éventuelle est une cohérence forte . Avec une cohérence forte, la base de données distribuée garantit que les écritures sur n'importe quel nœud sont d'abord distribuées avec un consensus et que toutes les lectures sur la base de données renvoient des valeurs cohérentes. Vous utiliserez une cohérence forte lorsque vous pouvez tolérer une latence de requête plus élevée et exiger des données correctes à chaque fois que vous lisez à partir de la base de données.*
 
-**Stockage d'objets**
+## Stockage d'objets
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.012.png" />
@@ -185,7 +185,7 @@ Le stockage d'objets dans le cloud est un ingrédient clé dans la séparation d
 
 Dans un environnement cloud, l'espace de stockage disponible est pratiquement illimité ; en pratique, la principale limite de l'espace de stockage pour les clients du cloud public est le budget
 
-**Recherche d'objet**
+## Recherche d'objet
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.013.png" />
@@ -202,11 +202,11 @@ pour S3://some\_bucket/data-example.json
 
 Malgré les apparences, il n’y a pas d’arborescence, Cela peut sembler être un détail technique mineur, mais les ingénieurs doivent comprendre que certaines opérations au niveau du "répertoire" sont coûteuses dans un magasin d'objets. Si le bucket contient des millions d'objets, cette opération peut prendre un certain temps, même si le "sous-répertoire" ne contient que quelques objets.
 
-**Cohérence des objets et gestion des versions**
+## Cohérence des objets et gestion des versions
 
 Comme mentionné, les magasins d'objets ne prennent pas en charge les mises à jour ou les ajouts sur place en règle générale. Nous écrivons un nouvel objet sous la même clé pour mettre à jour un objet. Dans leur configuration de base les stockages d’objets ont une cohérence éventuelle (au bout d’un moment les bonnes données disponibles) dans le cas d’une nouvelle version cela peut poser des problème si on a besoin des données en temps réel.
 
-**Classes et niveaux de stockage**
+## Classes et niveaux de stockage
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.014.png" />
@@ -216,7 +216,7 @@ Fournisseurs de cloud proposent désormais des classes de stockage qui réduisen
 
 Dans cet exemple de GCP (Google cloud platform) on peut voir que chaque à une spécification, par exemple la classe standard, on peut accéder au données quand on le désire sans surcoût, pour les données coldline, on est censé ne récupéré les données qu’une fois par trimestre sans avoir des surcoût.
 
-**Systèmes de stockage basés sur le cache et la mémoire**
+## Systèmes de stockage basés sur le cache et la mémoire
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.015.png" />
@@ -226,7 +226,7 @@ un système basé sur la mémoire cache et comme basé sur la mémoire cache et/
 
 Mais comme nous l’avons vu plus haut, ce type de mémoire sont très sensibles à la perte de mémoire, il sert plus de support pour que l’application n’ait pas besoin d’aller chercher les données dans la base de données “lente” si elle est déjà présente dans le la base de données in-memory.
 
-**Le système de fichiers distribué Hadoop**
+## Le système de fichiers distribué Hadoop
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.016.jpeg" />
@@ -240,7 +240,7 @@ Hadoop décompose les fichiers volumineux en *blocs* , morceaux de données de m
 
 Même si de moins en moins utilisé, il existe encore on-premise de nombreuse architecture Hadoop hérité, de plus de nombreux paradigmes de big data se sont inspiré de ce dernier.
 
-**Stockage en continu**
+## Stockage en continu
 
 Données en continua des exigences de stockage différentes de celles des données non diffusées en continu.
 
@@ -250,7 +250,7 @@ Cependant, les frameworks de streaming distribués et évolutifs comme Apache Ka
 
 Les concurrents de Kafka (dont Amazon Kinesis, Apache Pulsar et Google Cloud Pub/Sub) prennent également en charge la longue conservation des données.
 
-**Index, partitionnement et clustering**
+## Index, partitionnement et clustering
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.017.jpeg" />
@@ -258,15 +258,15 @@ Les concurrents de Kafka (dont Amazon Kinesis, Apache Pulsar et Google Cloud Pub
 
 Index fournir une carte de la table pour des champs particuliers et permettre une recherche extrêmement rapide des enregistrements individuels. Sans index, une base de données devrait parcourir une table entière pour trouver les enregistrements satisfaisant uneWHERE condition.
 
-**Des index aux partitions et au clustering**
+## Des index aux partitions et au clustering
 
 Le partitionnement est un mécanisme utilisé pour diviser les données d'une table en plusieurs parties, appelées partitions. Les partitions sont utilisées pour optimiser les performances en limitant la quantité de données qui doit être parcourue pour répondre à une requête. Les données sont généralement partitionnées en fonction d'une colonne spécifique, comme la date ou l'heure, de sorte que seules les données de la période spécifiée dans la requête sont analysées.
 
 Le clustering, quant à lui, est un mécanisme utilisé pour regrouper les lignes de données similaires dans une table. Cela peut être utilisé pour améliorer les performances en regroupant les données qui ont des valeurs similaires pour certaines colonnes, ce qui permet de limiter la quantité de données qui doit être parcourue pour répondre à une requête.
 
-**Abstractions de stockage d'ingénierie de données**
+## Abstractions de stockage d'ingénierie de données
 
-**Data Warehouse**
+## Data Warehouse
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.018.jpeg" />
@@ -274,13 +274,13 @@ Le clustering, quant à lui, est un mécanisme utilisé pour regrouper les ligne
 
 Un data warehouse est une OLAP. Une architecture de centralisation des données et à un modèle organisationnel au sein d'une entreprise. La limitation est que le data warehouse cloud ne peuvent pas gérer des données véritablement non structurées, telles que des images, des vidéos ou de l'audio, contrairement à un véritable data lake. Les data warehouses cloud peuvent être associés au stockage d'objets pour fournir une solution complète de data lake.
 
-**Data Lake**
+## Data Lake
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.019.jpeg" />
 </p>Un data lake est un système de stockage de données en nuage qui permet de stocker des données non structurées, semi-structurées et structurées de diverses sources à leur format d'origine. Il permet de stocker des données brutes telles quelles, sans les formater ni les restreindre par des schémas prédéfinis.
 
-**Data Lakehouse**
+## Data Lakehouse
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.020.png" />
@@ -290,9 +290,9 @@ Un data lakehouse est une combinaison d'un data lake et d'une plateforme de gest
 
 La principale différence entre un data lake et un data lakehouse est que le data lakehouse se concentre sur l'analyse des données, tandis que le data lake se concentre sur le stockage et la gestion des données brutes. Les data lakehouses ont tendance à offrir des fonctionnalités de qualité de données, de gestion de schémas et de catalogage de données, qui n'est pas nécessairement présent dans les data lakes.
 
-**Grandes idées et tendances en matière de stockage**
+## Grandes idées et tendances en matière de stockage
 
-**Catalogue de données**
+## Catalogue de données
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.021.png" />
@@ -302,7 +302,7 @@ Un catalogue de données (data catalog) est un système qui permet de décrire, 
 
 Un catalogue de données peut également inclure des fonctionnalités de gouvernance des données, telles que la gestion des autorisations d'accès aux données, la surveillance des utilisations des données et la mise en place de règles pour garantir la qualité des données. Il peut également inclure des fonctionnalités de découverte de données, comme la possibilité de rechercher des données par mots-clés, de filtrer les résultats de recherche par des métadonnées et de visualiser les données sous forme de graphiques et de tableaux.
 
-**Data Sharing**
+## Data Sharing
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.022.jpeg" />
@@ -312,7 +312,7 @@ Un catalogue de données peut également inclure des fonctionnalités de gouvern
 
 Un environnement cloud mutualisé facilite grandement la collaboration interorganisationnelle. Cependant, il présente également de nouveaux défis en matière de sécurité. Les organisations doivent contrôler attentivement les politiques qui régissent qui peut partager des données avec qui pour éviter une exposition accidentelle ou une exfiltration délibérée.
 
-**Schéma**
+## Schéma
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.023.png" />
@@ -325,34 +325,34 @@ Schema peut fonctionner comme une sorte de pierre de Rosette, des instructions q
 
 Le principal avantage du schéma en écriture est qu'il applique les normes de données, ce qui facilite la consommation et l'utilisation des données à l'avenir. Schema on read met l'accent sur la flexibilité, permettant à pratiquement toutes les données d'être écrites. Cela se fait au prix d'une plus grande difficulté à consommer des données à l'avenir.
 
-**Séparation du calcul et du stockage**
+## Séparation du calcul et du stockage
 
 L’un des paradigme des infrastructure data est la séparation du calcul et du stockage, par exemple le data lake se chargera du stockage alors que Spark lui sera installé sur autre machine avec ses ressources propres pour lire les données et les transformer. ce type de paradigme a ouvert de nouvelles approche.
 
-**Ephémérité et scalabilté**
+## Ephémérité et scalabilté
 
 Les ressources de calcul éphémères permettent aux ingénieurs de créer des clusters massifs pour terminer les tâches à temps, puis de supprimer les clusters lorsque ces tâches sont terminées.
 
-**Durabilité et disponibilité des données**
+## Durabilité et disponibilité des données
 
 Les magasins d'objets cloud atténuent considérablement le risque de perte de données et offrent généralement une disponibilité (disponibilité) extrêmement élevée. Le cloud storage object stocke les données sur plusieurs zones ; si une catastrophe naturelle détruit une zone, les données sont toujours disponibles pour les zones restantes. La disponibilité de plusieurs zones réduit également les risques de panne de données. Si les ressources d'une zone diminuent, les ingénieurs peuvent activer les mêmes ressources dans une zone différente.
 
-**Cycle de vie du stockage des données et conservation des données**
+## Cycle de vie du stockage des données et conservation des données
 
-**Données chaudes, chaudes et froides**
+## Données chaudes, chaudes et froides
 
 <p align="center">
   <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.024.png" />
 </p>En fonction de la fréquence à laquelle les données sont consultées, nous pouvons approximativement répartir la manière dont elles sont stockées en trois catégories de persistance : chaude, tiède et froide.
 
-**Données chaudes**
+## Données chaudes
 
 *Les données chaudes* ont exigences d'accès instantané ou fréquent. Le stockage sous-jacent pour les données chaudes est adapté pour un accès et des lectures rapides, comme le SSD ou la mémoire. En raison du type de matériel impliqué dans les données chaudes, le stockage des données chaudes est souvent la forme de stockage la plus coûteuse, mais la récupération est souvent peu coûteuse
 
-**Données tièdes**
+## Données tièdes
 
 Les données tièdes sont consultée semi-régulièrement, disons, une fois par mois. Aucune règle stricte et rapide n'indique la fréquence d'accès aux données chaudes, mais c'est moins que les données chaudes et plus que les données froides. Les principaux fournisseurs de cloud proposent des niveaux de stockage d'objets qui prennent en charge les données tièdes
 
-**Données froides**
+## Données froides
 
 *les données froides, sont des données* rarement consultées. Le matériel utilisé pour archiver les données froides est généralement bon marché et durable, comme le disque dur, le stockage sur bande et les systèmes d'archivage basés sur le cloud. Les données froides sont principalement destinées à l'archivage à long terme, lorsqu'il y a peu ou pas d'intention d'accéder aux données. Bien que le stockage de données froides soit bon marché, la récupération de données froides est souvent coûteuse.
