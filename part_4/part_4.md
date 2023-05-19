@@ -1,4 +1,4 @@
-﻿Choisir les technologies tout au long du cycle de vie de l'ingénierie des données
+﻿# Choisir les technologies tout au long du cycle de vie de l'ingénierie des données
 
 choisir les bonnes technologies pour servir cette architecture, L'architecture est stratégique ; les outils sont tactiques
 
@@ -6,7 +6,7 @@ L'architecture est la conception, la feuille de route et le plan directeur de ha
 
 L'architecture est le quoi , le pourquoi et le quand . Des outils sont utilisés pour faire de l'architecture une réalité ; les outils sont le comment .
 
-**Taille et capacités de l'équipe**
+## Taille et capacités de l'équipe
 
 Si l’équipe est petite, penser à utiliser des technologies simples, car chaque personne sera probablement responsable de plusieurs tâches, elle n’aura pas la bande passante pour plusieurs solutions complexes.
 
@@ -15,21 +15,21 @@ Réfléchir à des solutions en fonction des compétences de l’équipe :
 - Les gens penchent-ils vers les outils low-code ou préfèrent-ils les approches code-first ?
 - Les gens maîtrisent-ils certains langages comme Java, Python ou Go ?
 
-**La rapidité de commercialisation**
+## La rapidité de commercialisation
 
 choisir les bonnes technologies qui vous aident à fournir des fonctionnalités et des données plus rapidement tout en maintenant des normes de qualité et de sécurité élevées
 
 Le parfait est l'ennemi du bien, offrez de la valeur tôt et souvent
 
-**Interopérabilité**
+## Interopérabilité
 
 *interopérabilité* décrit comment diverses technologies ou systèmes se connectent, échangent des informations et interagissent. Soyez toujours conscient de la simplicité de connexion de vos différentes technologies tout au long du cycle de vie de l'ingénierie des données
 
-**Optimisation des coûts et valeur commerciale**
+## Optimisation des coûts et valeur commerciale
 
 les budgets et le temps sont finis, et le coût est une contrainte majeure pour choisir les bonnes architectures et technologies de données
 
-**Total Cost of Ownership**
+## Total Cost of Ownership
 
 *Total cost of ownership* (TCO) est le coût estimatif total d'une initiative
 
@@ -43,7 +43,7 @@ Les dépenses se divisent en deux grands groupes :
 
 Alors que le capex est axé sur le long terme, l'opex est sur le court terme. Toujours essayer de tendre vers l’opex pour avoir plus de flexibilité
 
-**Total Opportunity Cost of Ownership**
+## Total Opportunity Cost of Ownership
 
 *Total opportunity cost of ownership* (TOCO) est le coût des opportunités perdues que nous encourons lors du choix d'une technologie, d'une architecture ou d'un processus, difficile à évaluer, c’est souvent un angle mort.
 
@@ -51,11 +51,11 @@ Lorsque que l’on opte pour une architecture ou un choix technologique on renon
 
 Toujours essayer d’avoir une vision d’ensemble et surtout éviter à tout prix les technologies qui sont peu flexibles est difficile à changer.
 
-**FinOps**
+## FinOps
 
 les dépenses cloud typiques sont intrinsèquement opex
 
-**Aujourd'hui contre l'avenir : technologies immuables contre technologies transitoires**
+## Aujourd'hui contre l'avenir : technologies immuables contre technologies transitoires
 
 Vous devez choisir la meilleure technologie pour le moment et un avenir proche, penser au principe YAGNI (You ain’t gonna need it) est toujours se rappeler que l’avenir à long terme est extrêmement difficile à prédire alors n’essayez pas.
 
@@ -71,11 +71,15 @@ l'effet Lindy : plus une technologie est implantée depuis longtemps, plus elle 
 
 *Les technologies transitoires :* sont *Les technologies* qui vont et viennent
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.001.png)conseil : Trouvez les technologies immuables tout au long du cycle de vie de l'ingénierie des données et utilisez-les comme base. Évitez de rentrer dans une technologie parce qu’elle est vue comme “jolie” être rationnel et orienté crréation de valeur
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.001.png" />
+</p>conseil : Trouvez les technologies immuables tout au long du cycle de vie de l'ingénierie des données et utilisez-les comme base. Évitez de rentrer dans une technologie parce qu’elle est vue comme “jolie” être rationnel et orienté crréation de valeur
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.002.png)
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.002.png" />
+</p>
 
-**On Premises**
+## On Premises
 
 Il s’agit des entreprises qui n’utilisent pas le cloud, mais uniquement des technologies sur site, souvent les grosses entreprises ou/et hautement régulé ou les sociétés hautement technologiques (ne peut pas se permettre de stocker les données chez une solution concurrentes)
 
@@ -85,7 +89,7 @@ Considération :
 - responsables sur le plan matériel et des logiciels (catastrophe naturelle, licenses logiciels, tombe en panne…)
 - Les entreprises cloud sont souvent plus agiles
 
-**Cloud**
+## Cloud
 
 location du matériel et des services gérés auprès d'un fournisseur de cloud (tel qu'AWS, Azure ou Google Cloud).
 
@@ -99,21 +103,25 @@ Considération :
   - SaaS (Software as a service) : Va plus loin que PaaS, ici, on se contente d’utiliser un logiciel avec une interface utilisateur (Salesforce, Google Workspace, Microsoft 365, Zoom et Fivetran)
   - Abstraction : le SaaS est une abstraction, c'est-à-dire que l’on rend une chose beaucoup plus facile à prendre en main en laissant les détails cacher à l’utilisateur final
 
-**Hybrid Cloud**
+## Hybrid Cloud
 
 Suppose qu'une organisation conservera indéfiniment certaines charges de travail en dehors du cloud, il y a plusieurs cas de figure par exemple, on peut avoir une maîtrise dans un domaine donc le garder on-prem et déplacer le reste de la charge vers le cloud.
 
 un bon modèle consiste à transfert toutes les tâche et le stockage de données vers le cloud et garder les app on-prem.
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.003.jpeg)
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.003.jpeg" />
+</p>
 
-**Multicloud**
+## Multicloud
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.004.jpeg)
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.004.jpeg" />
+</p>
 
 il s’agit de d’avoir plusieurs clouds en simultané, le plus souvent il s’agit de tirer le meilleur parti de chaque provider en fonction du besoin Le multicloud peut introduire une complexité importante. Les entreprises doivent désormais gérer une gamme vertigineuse de services sur plusieurs clouds ; l'intégration et la sécurité inter-cloud représentent un défi considérable ; la mise en réseau multicloud peut être diaboliquement compliquée
 
-**Build Versus Buy**
+## Build Versus Buy
 
 Build : L'argument en faveur de la construction est que vous avez un contrôle de bout en bout sur la solution et que vous n'êtes pas à la merci d'un fournisseur ou d'une communauté open source
 
@@ -121,11 +129,11 @@ Buy : L'argument en faveur de l'achat se résume à des contraintes de ressource
 
 Si possible ne réinventé pas la roue et utilisez des solutions du marché mature qui vous permettront de générer de la valeur
 
-**Open Source Software**
+## Open Source Software
 
 *Le logiciel libre* (OSS) est un modèle de distribution de logiciels dans lequel le logiciel et la base de code sous-jacente sont mis à disposition pour une utilisation générale, généralement sous des conditions de licence spécifiques. il est souvent soumis à des licences qui indique ce que vous avez le droit ou non. il existe deux types OSS le Community-managed OSS et le Commercial OSS.
 
-**Community-managed OSS**
+## Community-managed OSS
 
 Ce type d’OSS est souvent gratuit avec un accès au code, il est souvent un très bon choix car la communauté de passionné s’archane à la tâche. Cependant il existe des projets qui peuvent amener à des catastrophes car plus maintenu ou mal coder il faut savoir les choisir.
 
@@ -143,7 +151,7 @@ Considération :
 - Existe-t-il une communauté de chat dynamique (par exemple, dans Slack) qui fournit des encouragements et un soutien ?
 - etc
 
-**Commercial OSS**
+## Commercial OSS
 
 Il y a un souci majeur avec les OSS gérés par la communauté, il faut gérer les environnements dans lequel l’environnement évolue, les OSS commerciaux eux permettent en plus de l’OSS d’heberger l’OSS (Souvant en PaaS ou SaaS) pour éviter cette prise de tête.
 
@@ -169,14 +177,14 @@ Considération :
 - Combien l'entreprise contribue-t-elle à la base de code communautaire OSS ?
 - Quelle est la probabilité que le produit reste viable en tant qu'open source soutenu par la communauté si l'entreprise ferme ses portes ?
 
-**Proprietary Walled Gardens**
+## Proprietary Walled Gardens
 
 Certaines des plus grandes entreprises du secteur des données vendent des produits à source fermée, il en existe deux types :
 
 - Independent offerings
 - Cloud platform proprietary service offerings
 
-**Independent offerings**
+## Independent offerings
 
 Le marché des données est en expansion, il y donc de plus en plus d’outils qui serve à exploité ces données contre facturation, comme dans la plupart des business modèle hors tech ces solution sont fermé (on pas accès au code) et sont diffuser par des tiers qui ne sont pas des providers cloud, ces entreprise peuvent donner accès à des outils excellent mais il faut faire attention lors de leurs selections.
 
@@ -192,7 +200,7 @@ Considération :
 - Est-ce que ça vaut le coup?
 - L'entreprise survivra-t-elle assez longtemps pour que vous puissiez tirer profit de son produit ?
 
-**Cloud platform proprietary service offerings**
+## Cloud platform proprietary service offerings
 
 Fournisseurs de cloud développent et vendent leurs services propriétaires pour le stockage, les bases de données, etc. On peut prendre l’exemple de DynamoDB de AWS quoi est une BDD NoSQL pour la gestion de données dynamique/semi-structurées
 
@@ -201,20 +209,22 @@ Considération :
 - L'offre cloud est-elle nettement meilleure qu'une version indépendante ou OSS ?
 - Pouvez-vous réduire vos coûts en achetant de la capacité réservée ou en concluant un contrat d'engagement à long terme ?
 
-**Conseils**
+## Conseils
 
 - privilégié les OSS ou COSS
 - Concentrez-vous sur quelques domaines où la construction de quelque chose ajoutera une valeur significative ou réduira considérablement les frictions
 
-**Monolithe contre modulaire**
+## Monolithe contre modulaire
 
 Les systèmes monolithiques sont autonomes et remplissent souvent plusieurs fonctions sous un seul système. Le camp monolithe privilégie la simplicité d'avoir tout au même endroit.
 
 Le camp *modulaire* se penche vers les technologies découplées et les meilleures de leur catégorie, effectuant des tâches pour lesquelles ils sont particulièrement performants.
 
-**Monolithe**
+## Monolithe
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.005.png)
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.005.png" />
+</p>
 
 - Simple à mettre en place et à comprendre conceptuellement
 - Couplé → fragile
@@ -222,9 +232,11 @@ Le camp *modulaire* se penche vers les technologies découplées et les meilleur
 - Passage à un nouveau système difficile
 - Codebase tend vers la complexité (tout le code dans un seul endroit)
 
-**Modularité**
+## Modularité
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.006.png)
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.006.png" />
+</p>
 
 Au lieu de compter sur un monolithe massif pour gérer vos besoins, pourquoi ne pas séparer les systèmes et les processus en leurs domaines de préoccupation autonomes ? Les microservices peuvent communiquer via des API, permettant aux développeurs de se concentrer sur leurs domaines tout en rendant leurs applications accessibles à d'autres microservices.
 
@@ -235,17 +247,19 @@ Au lieu de compter sur un monolithe massif pour gérer vos besoins, pourquoi ne 
 - Complexité de codebase faible/modéré (chaque service à sa propre codebase)
 - Technologie interchangeable (un service Java peut remplacer un service écrit en Python)
 
-**Conseils**
+## Conseils
 
 - Interopérabilité : Architecte pour le partage et l'interopérabilité.
 - Éviter le "bear trap" : Quelque chose dans lequel il est facile d'entrer peut être douloureux ou impossible à échapper.
 - La flexibilité : Les choses évoluent si vite dans l'espace des données en ce moment. S'engager dans un monolithe réduit la flexibilité et les décisions réversibles.
 
-**Serverless vs Servers**
+## Serverless vs Servers
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.007.png)
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.007.png" />
+</p>
 
-**Serverless**
+## Serverless
 
 Grande tendance dans le cloud permet au développeur de créer et/ou exécuté leurs applications sans avoir à gérer les serveurs. Bien utiliser cette méthode permet de réduire les coûts, car elle est facturée à l’utilisation alors qu’un serveur lui est payé. En plus de ça, la non-gestion des serveurs augmente la simplicité d’utilisation.
 
@@ -258,9 +272,11 @@ Considération :
 - Monitoring constant des coûts.
 - Est-ce que le service serverless qu’on va utiliser est vraiment orienté vers ce que je veux faire ? les FaaS par exemple ne sont pas du tout prévu pour des exécutions lourdes.
 
-**Containers**
+## Containers
 
-![](Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.008.jpeg)
+<p align="center">
+  <img src="Aspose.Words.cd205e5b-c9a2-4d21-af73-976c03a51e7d.008.jpeg" />
+</p>
 
 les conteneurs sont l'une des technologies opérationnelles les plus puissantes et les plus tendances à ce jour. Les conteneurs jouent un rôle à la fois dans les services sans serveur et les microservices.
 

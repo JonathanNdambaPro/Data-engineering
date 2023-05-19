@@ -1,10 +1,12 @@
-﻿Génération de données dans les systèmes sources
+﻿# Génération de données dans les systèmes sources
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.001.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.001.png" />
+</p>
 
 Le but d’un data engineer est de créer de la valeur à partir de données brute, cependant ces données doivent venir de quelque part, l’appellation générique de ces endroits qui fournit des données sont appelées système source.
 
-**Sources de données : comment les données sont-elles créées ?**
+## Sources de données : comment les données sont-elles créées ?
 
 Les données sont une collection non organisée et sans contexte de faits et de chiffres. Il peut être créé de plusieurs façons, à la fois analogiques et numériques.
 
@@ -16,11 +18,13 @@ Exemple d'analogique à numérique est une application de SMS mobile qui convert
 
 Un exemple de création de données numériques est une transaction par carte de crédit sur une plateforme de commerce électronique.
 
-**Systèmes sources : idées principales**
+## Systèmes sources : idées principales
 
-**Fichiers et données non structurées**
+## Fichiers et données non structurées
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.002.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.002.jpeg" />
+</p>
 
 un fichier est une séquence d'octets, généralement stockée sur un disque. Les applications écrivent souvent des données dans des fichiers. Les fichiers peuvent stocker des paramètres locaux, des événements, des journaux, des images et de l'audio. les fichiers sont un support universel d'échange de données, ces données sont partout dans le monde réel.
 
@@ -28,13 +32,17 @@ La plupart des formats que vous rencontrerez lors de votre carrière sera :
 
 - Structuré :
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.003.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.003.png" />
+</p>
 
 - Excel
 - CSV
 - Semi-structuré
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.004.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.004.jpeg" />
+</p>
 
 - CSV
 - JSON
@@ -43,11 +51,17 @@ La plupart des formats que vous rencontrerez lors de votre carrière sera :
   - TXT
   - CSV (Encore une fois)
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.005.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.005.png" />
+</p>
 
-**Api**
+- Développement, mise en œuvre et maintenance de systèmes de gestion de données
+- Conversion de données brutes en informations de haute qualité pour l'analyse et l'apprentissage automatique
+- Intersection de la sécurité, de la gestion des données, des DataOps, de l'architecture des données, de l'orchestration et de l'ingénierie logicielle Api
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.006.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.006.jpeg" />
+</p>
 
 Une API (Application Programming Interface) est un ensemble de règles et de spécifications qui définissent comment les différents logiciels et systèmes peuvent communiquer entre eux. Les APIs permettent aux développeurs de créer des applications qui interagissent avec des services ou des bases de données externes.
 
@@ -62,7 +76,9 @@ En principe, une API est censé faciliter le travail des data engineers. En prat
 
 **Base de données d’application (OLTP)**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.007.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.007.png" />
+</p>
 
 Une base de données est un système de gestion de données qui permet de stocker, organiser et accéder à des informations de manière efficace. Elle est généralement utilisée pour stocker des informations structurées, telles que des données client, des informations sur des produits ou des transactions financières.
 
@@ -102,7 +118,9 @@ L’OLAP est optimisé pour la lecture et donc très prisé pour les problémati
 
 **Change Data Capture**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.008.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.008.png" />
+</p>
 
 Le Change Data Capture (CDC) est une technique utilisée pour capturer et répliquer les modifications apportées aux données d'une source en temps réel, pour les propager vers une cible.
 
@@ -118,7 +136,9 @@ Il y a plusieurs cas d'utilisation courants pour CDC :
 
 **Logs**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.009.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.009.png" />
+</p>
 
 un log capture les informations sur les événements qui se produisent dans les systèmes. Par exemple, un journal peut capturer le trafic et les modèles d'utilisation sur un serveur Web. Le système d'exploitation de votre ordinateur de bureau (Windows, macOS, Linux) enregistre les événements au démarrage du système et lorsque les applications démarrent ou se bloquent, par exemple. Les journaux sont une source de données riche, potentiellement précieuse pour l'analyse des données en aval, le ML et l'automatisation.
 
@@ -139,7 +159,9 @@ les logs de manière générale répondent à minimas à trois questions :
 
 Exemple :
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.010.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.010.png" />
+</p>
 
 Ces sorties de console sont souvent converties en fichier pour être stocké et consulté ultérieurement
 
@@ -156,13 +178,17 @@ Les logs ont principalement 3 formes :
 
 Les Logs des bases de données ont un rôle encore plus spécifique et critique, ils sont encodés en binaire et permettent si jamais la BDD venait à être perdu à la reconstruire, en effet comme tous les types de transaction sont enregistrés, cette opération de backup est possible. Ces mêmes Logs servent pour les CDC que nous avons vu précédemment.
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.011.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.011.png" />
+</p>
 
 **CRUD**
 
 Signifie *create* , *read* , *update* et *delete* , est un modèle transactionnel couramment utilisé en programmation et représente les quatre opérations de base du stockage persistant. ce modèle est couramment utilisé dans le SQL et les API (HTTP dans le tableau ci-dessous)
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.012.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.012.jpeg" />
+</p>
 
 **Insert-Only**
 
@@ -179,21 +205,29 @@ Contrairement à ce que l’on pense, une message queue et une streaming platfor
 
 Un message correspond aux données brutes communiquées sur deux ou plusieurs systèmes.
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.013.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.013.png" />
+</p>
 
 Un message est généralement envoyé via une message queue, une fois le message livré, il est supprimé de la file d'attente.
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.014.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.014.png" />
+</p>
 
 En revanche, un *stream* est un journal d'enregistrements d'événements en append-only. Au fur et à mesure que des événements se produisent, ils sont accumulés dans une séquence ordonnée avec un horodatage ou un ID pour pouvoir ordonner des événements.
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.015.png)Vous utiliserez les stream lorsque vous vous souciez de ce qui s'est passé au cours de nombreux événements. En raison de la nature d'ajout uniquement des stream, les enregistrements d'un stream sont conservés sur une longue fenêtre de conservation (souvent des semaines ou des mois), ce qui permet des opérations complexes sur des enregistrements tels que des agrégations sur plusieurs enregistrements ou la possibilité de revenir à un point dans le temps dans le stream.
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.015.png" />
+</p>Vous utiliserez les stream lorsque vous vous souciez de ce qui s'est passé au cours de nombreux événements. En raison de la nature d'ajout uniquement des stream, les enregistrements d'un stream sont conservés sur une longue fenêtre de conservation (souvent des semaines ou des mois), ce qui permet des opérations complexes sur des enregistrements tels que des agrégations sur plusieurs enregistrements ou la possibilité de revenir à un point dans le temps dans le stream.
 
 Les streams peuvent traiter les messages et que les plateformes de streaming sont fréquemment utilisées pour la transmission des messages. Nous accumulons habituellement des messages dans des stream lorsque nous souhaitons effectuer des analyses de messages.
 
 **Types de temps**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.016.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.016.png" />
+</p>
 
 Vous souhaiterez enregistrer ces différents temps, de préférence de manière automatisée. Configurez la surveillance le long de vos workflows de données pour capturer quand les événements se produisent, quand ils sont ingérés et traités, et combien de temps, il a fallu pour traiter les événements.
 
@@ -235,7 +269,9 @@ Maintenant que nous avons vu les différents types de système source, nous allo
 
 Les données sont stockées dans une table de *relations* (lignes), et chaque relation contient plusieurs *champs* (colonnes). Chaque relation du tableau a le même *schéma* (une séquence de colonnes avec des types statiques assignés tels que chaîne, entier ou flottant).
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.017.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.017.png" />
+</p>
 
 Les tables sont généralement indexées par un *clé primaire* , un champ unique pour chaque ligne de la table.
 
@@ -255,7 +291,9 @@ D'une part, la suppression des contraintes relationnelles peut améliorer les pe
 
 **Key-value stores**
 
-Une base de données clé-valeur est une base de données non relationnelle qui récupère les enregistrements à l'aide d'une clé qui identifie de manière unique chaque enregistrement.![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.018.jpeg)
+Une base de données clé-valeur est une base de données non relationnelle qui récupère les enregistrements à l'aide d'une clé qui identifie de manière unique chaque enregistrement.<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.018.jpeg" />
+</p>
 
 Considération :
 
@@ -268,11 +306,15 @@ Considération :
 
 **Document stores**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.019.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.019.jpeg" />
+</p>
 
 une base de données documents est un magasin clé-valeur spécialisé. Dans ce contexte, un *document* est un objet imbriqué ; nous pouvons généralement considérer chaque document comme un objet JSON. Les documents sont stockés dans des collections et récupérés par clé. Une collection équivaut à peu près à une table dans une base de données relationnelle. L'une des principales différences entre les bases de données relationnelles et les magasins de documents est que ces derniers ne prennent pas en charge les jointures. Cela signifie que les données ne peuvent pas être facilement *normalisées* , c'est-à-dire réparties sur plusieurs tables. Idéalement, toutes les données associées peuvent être stockées dans le même document.
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.020.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.020.png" />
+</p>
 
 Consdération :
 
@@ -285,7 +327,9 @@ Consdération :
 
 **Wide-column**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.021.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.021.jpeg" />
+</p>
 
 La base de données à larges colonnes est optimisée pour stocker des quantités massives de données avec des taux de transaction élevés et une latence extrêmement faible. Ces bases de données peuvent évoluer vers des taux d'écriture extrêmement élevés et de grandes quantités de données, populaires dans les applications de commerce électronique, de technologie financière, de technologie publicitaire, d'IoT, etc.
 
@@ -300,7 +344,9 @@ Considération :
 
 **Graph databases**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.022.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.022.png" />
+</p>
 
 Une base de données graphique est un type de base de données qui utilise des graphes pour stocker et gérer les données. Les graphes sont des structures de données qui permettent de représenter les relations entre les différents objets de données, comme des personnes, des produits, des lieux, etc.
 
@@ -308,7 +354,9 @@ Une base de données graphique est composée de deux éléments principaux: les 
 
 Les bases de données graphiques peuvent être utilisées pour modéliser les relations entre les utilisateurs d'un réseau social, et pour effectuer des requêtes de parcours de graphe pour afficher les relations entre les utilisateurs par exemple.
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.023.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.023.jpeg" />
+</p>
 
 Considération :
 
@@ -326,7 +374,9 @@ Une base de données de recherche est un type de base de données qui est conçu
 
 **REST**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.024.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.024.jpeg" />
+</p>
 
 REST (Representational State Transfer) est un style architectural pour les systèmes distribués basé sur HTTP. Il utilise des méthodes standard HTTP (comme GET, POST, PUT et DELETE) pour interagir avec les ressources sur un serveur. Les ressources sont identifiées par des URI (Uniform Resource Identifiers) et sont généralement représentées en format JSON ou XML. Le but de REST est de fournir une architecture simple et efficace pour les applications distribuées en utilisant les protocoles existants d'Internet.
 
@@ -343,7 +393,9 @@ Considération :
 
 **Webhooks**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.025.jpeg)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.025.jpeg" />
+</p>
 
 Un webhook est un mécanisme qui permet à une application de recevoir des notifications lorsqu'un événement spécifique se produit. Il s'agit généralement d'une URL qui est configurée pour recevoir des données lorsqu'un événement est déclenché. Les webhooks sont souvent utilisés pour mettre à jour des données en temps réel, pour envoyer des notifications ou pour déclencher des actions automatisées.
 
@@ -372,7 +424,9 @@ L'accès direct aux données tierces se fait généralement via des API, via le 
 
 **Message queues**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.026.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.026.png" />
+</p>
 
 Une *message queues* est un mécanisme permettant d'envoyer des données de manière asynchrone (généralement sous forme de petits messages individuels, en kilo-octets) entre des systèmes discrets à l'aide d'un modèle de publication (publish) et d'abonnement (subscribe). Les données sont publiées dans une message queue et remises à un ou plusieurs subscriber. Le subscriber accuse réception du message en le retirant de la file d'attente.
 
@@ -390,7 +444,9 @@ Les messages peuvent être envoyés une seule fois ou au moins une fois. Si un m
 
 **Event-streaming platforms**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.027.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.027.png" />
+</p>
 
 Les plateformes de streaming d'événements sont des systèmes qui permettent de collecter, de stocker et de traiter des stream de données en temps réel, souvent à grande échelle. Ces stream de données peuvent être générés par des sources telles que les capteurs IoT, les applications d'entreprise et les sources de données externes. Les plateformes de streaming d'événements permettent de traiter ces données en temps réel pour des applications telles que l'analyse de données en temps réel, la détection d'anomalies et les systèmes de recommandation. Dans une plate-forme de streaming d'événements, les données sont conservées pendant un certain temps et il est possible de rejouer les messages d'un moment passé.
 
@@ -398,7 +454,9 @@ Les plateformes de streaming d'événements sont des systèmes qui permettent de
 
 Dans une plate-forme de diffusion d'événements, un producteur diffuse des événements sur un sujet, une collection d'événements connexes. Un sujet peut contenir des alertes de fraude, des commandes de clients ou des relevés de température provenant d'appareils IoT, par exemple. Un sujet peut avoir zéro, un ou plusieurs producteurs et clients sur la plupart des plateformes de streaming d'événements.
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.028.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.028.png" />
+</p>
 
 Différence avec les messages queue :
 
@@ -406,7 +464,9 @@ Différence avec les messages queue :
 
 **Stream partitions**
 
-![](Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.029.png)
+<p align="center">
+  <img src="Aspose.Words.5b0e375e-b731-4d0c-8284-320e146f4791.029.png" />
+</p>
 
 les stream partitions sont des divisions d'un stream en plusieurs stream. Une bonne analogie est une autoroute à plusieurs voies. Le fait d'avoir plusieurs voies permet un parallélisme et un débit plus élevé. Les messages sont distribués sur les partitions par *clé de partition* . Les messages avec la même clé de partition finiront toujours dans la même partition.
 

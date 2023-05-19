@@ -1,16 +1,22 @@
 ﻿Requêtes, modélisation et transformation
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.001.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.001.png" />
+</p>
 
 **Requêtes**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.002.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.002.png" />
+</p>
 
 Une requête vous permet de récupérer et d'agir sur des données.
 
 Il est comparable au CRUD de la manière suivante :
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.003.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.003.png" />
+</p>
 
 **Data definition language (DDL)**
 
@@ -22,7 +28,9 @@ Les ingénieurs de données utilisent des expressions SQL DDL courantes :CREATE,
 
 Après avoir utilisé DDL pour définir des objets de base de données, vous devez ajouter et modifier des données dans ces objets, vous devrez utiliser les commandes DML.
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.004.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.004.png" />
+</p>
 
 **Data control language (DCL)**
 
@@ -30,11 +38,15 @@ Après avoir utilisé DDL pour définir des objets de base de données, vous dev
 
 par exemple :
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.005.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.005.png" />
+</p>
 
 on donne le droit à Sarah d’accéder à la BDD data\_science\_db en lecture seul
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.006.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.006.png" />
+</p>
 
 Ici, on révoque ce même droit de lecture **Transaction control language**
 
@@ -42,7 +54,9 @@ Avec TCL, nous pouvons définir des points de contrôle de validation, des condi
 
 **La vie d'une requête**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.007.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.007.png" />
+</p>
 
 - Le moteur de base de données compile le SQL, analyse le code pour vérifier la sémantique appropriée et s'assure que les objets de base de données référencés existent et que l'utilisateur actuel dispose de l'accès approprié à ces objets.
 - Le code SQL est converti en bytecode. Ce bytecode exprime les étapes qui doivent être exécutées sur le moteur de base de données dans un format efficace et lisible par machine.
@@ -51,7 +65,9 @@ Avec TCL, nous pouvons définir des points de contrôle de validation, des condi
 
 **L'optimiseur de requête**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.008.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.008.png" />
+</p>
 
 Les requêtes peuvent avoir des temps d'exécution très différents, selon la façon dont ils sont exécutés. Le travail d'un optimiseur de requêtes consiste à optimiser les performances des requêtes et à minimiser les coûts en divisant la requête en étapes appropriées dans un ordre efficace.
 
@@ -89,61 +105,81 @@ Le plan d'explication de l'optimiseur de requête vous montrera comment l'optimi
 
 **L'approche du suiveur rapide**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.009.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.009.png" />
+</p>
 
 Le modèle de requête CDC de base nous permet de fournir des analyses en temps réel avec un impact minimal sur le système de production. Le modèle suiveur rapide peut utiliser une base de données transactionnelle conventionnelle comme suiveur, mais l'utilisation d'un système orienté OLAP approprié présente des avantages significatifs.
 
 **L'architecture Kappa**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.010.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.010.png" />
+</p>
 
 Lorsque les bases de données d'application de production sont la source, l'architecture Kappa stocke les événements du CDC. Au lieu de simplement traiter un système de stockage en continu comme un tampon, l'architecture Kappa conserve les événements dans le stockage pendant une période de rétention plus longue, et les données peuvent être directement interrogées à partir de ce stockage. La période de conservation peut être assez longue (mois ou années). Notez que c'est beaucoup plus long que la période de rétention utilisée dans les systèmes orientés purement temps réel, généralement une semaine au maximum.
 
 **Windows, triggers, statistiques émises et données tardives Session window**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.011.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.011.png" />
+</p>
 
 *La fenêtre de session* regroupe les événements qui se produisent à proximité les uns des autres et filtre les périodes d'inactivité lorsque aucun événement ne se produit. Nous pourrions dire qu'une session utilisateur correspond à n'importe quel intervalle de temps sans intervalle d'inactivité de cinq minutes ou plus. Notre système collecte des données par une clé d'identification d'utilisateur, ordonne des événements, détermine les lacunes et les limites de session, et calcule des statistiques pour chaque session.
 
 **Fixed-time windows**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.012.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.012.png" />
+</p>
 
 *La fenêtre à temps fixe* comporte des périodes de temps fixes qui s'exécutent selon un calendrier fixe et traite toutes les données depuis la fermeture de la fenêtre précédente.
 
 **Sliding windows**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.013.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.013.png" />
+</p>
 
 Les événements dans une fenêtre glissante sont regroupées en fenêtres de durée fixe, où des fenêtres distinctes peuvent se chevaucher. Tout comme nous le faisions auparavant, nous pouvons émettre des statistiques moyennes et médianes.
 
 **Watermarks**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.014.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.014.png" />
+</p>
 
 Un watermark est un seuil utilisé par une fenêtre pour déterminer si les données d'une fenêtre se situent dans l'intervalle de temps établi ou si elles sont considérées comme en retard. Si des données arrivent qui sont nouvelles dans la fenêtre, mais plus anciennes que l'horodatage du watermark, elles sont considérées comme des données tardives.
 
 **Combiner des stream avec d'autres données Jointures de tables conventionnelles**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.015.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.015.png" />
+</p>
 
 Les tables peuvent être alimentées par des stream. L'approche la plus élémentaire de ce problème consiste simplement à joindre ces deux tables dans une base de données. Un stream peut alimenter l'une de ces tables ou les deux.
 
 **Enrichissement**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.016.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.016.png" />
+</p>
 
 *L'enrichissement* signifie que nous joignons un stream à d'autres données. En règle générale, cela est fait pour fournir des données améliorées dans un autre stream.
 
 **Rejoindre flux à flux**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.017.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.017.png" />
+</p>
 
 Les architectures de jointure en continu typiques reposent sur des mémoire tampons. L'intervalle de rétention de la mémoire tampon est configurable ; un intervalle de conservation plus long nécessite plus de stockage et d'autres ressources. Les événements sont joints aux données dans la mémoire tampon et sont finalement supprimés une fois l'intervalle de rétention écoulé
 
 **La modélisation des données**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.018.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.018.jpeg" />
+</p>
 
 La modélisation des données implique de choisir délibérément une structure cohérente pour les données et constitue une étape critique pour rendre les données utiles à l'entreprise.
 
@@ -153,7 +189,9 @@ Un *modèle de données* représente la façon dont les données se rapportent a
 
 **Modèles de données conceptuels, logiques et physiques**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.019.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.019.png" />
+</p>
 
 - *Conceptuel :*
   - *Contient la logique et les règles métier et décrit les données du système, telles que les schémas, les tables et les champs (noms et types). Lors de la création d'un modèle conceptuel, il est souvent utile de le visualiser dans un diagramme entité-relation (ER), qui est un outil standard pour visualiser les relations entre diverses entités dans vos données (commandes, clients, produits, etc.).*
@@ -197,7 +235,9 @@ La normalisation permet d’éviter des incohérence :
 
 **Inmon**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.020.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.020.png" />
+</p>
 
 Quatre principes fondamentaux pour un data warehouse :
 
@@ -219,7 +259,9 @@ Différentes plages de temps peuvent être interrogées.
 
 **Kimball**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.021.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.021.jpeg" />
+</p>
 
 Le modèle Kimball est ascendant, vous encourageant à modéliser et à servir l'analyse du département ou de l'entreprise dans l'entrepôt de données lui-même. Cela peut permettre une itération et une modélisation plus rapides qu'Inmon, avec le compromis d'une intégration de données potentiellement plus lâche, de la redondance des données et de la duplication.
 
@@ -231,7 +273,9 @@ Le premier type de table dans un schéma en étoile est la table de faits, qui c
 
 Exemple de table de fait :
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.022.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.022.png" />
+</p>
 
 **Table de dimensions**
 
@@ -253,23 +297,33 @@ Un SCD (slowly changing dimension) de type 3 est similaire à un SCD de type 2, 
 
 Exemple de table de dimension : Type 1 :
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.023.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.023.jpeg" />
+</p>
 
 le Type 1 est le comportement par défaut de la plupart des entrepôts de données, et le Type 2 est celui que nous voyons le plus couramment utilisé dans la pratique
 
 Type 2 :
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.024.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.024.jpeg" />
+</p>
 
 Type 3 :
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.025.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.025.png" />
+</p>
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.026.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.026.png" />
+</p>
 
 **Star schema**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.027.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.027.jpeg" />
+</p>
 
 Maintenant que vous avez une compréhension de base des faits et des dimensions, il est temps de les intégrer dans un schéma en étoile. Le *schéma en étoile* représente le modèle de données de l'entreprise. Contrairement aux approches hautement normalisées de la modélisation des données, le schéma en étoile est une table de faits entourée des dimensions nécessaires. Cela entraîne moins de jointures que les autres modèles de données, ce qui accélère les performances des requêtes. Un autre avantage d'un schéma en étoile est qu'il est sans doute plus facile à comprendre et à utiliser pour les utilisateurs professionnels.
 
@@ -281,7 +335,9 @@ Maintenant que vous avez une compréhension de base des faits et des dimensions,
 
 **Snowflake schema**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.028.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.028.jpeg" />
+</p>
 
 Le Snowflake schema est un modèle de conception de bases de données qui utilise des tables de dimension normalisées pour réduire la redondance des données. Il est similaire au Star schema, mais les tables de dimension sont subdivisées en sous-tables pour réduire les redondances et les dépendances fonctionnelles inutiles. Le Snowflake schema est généralement utilisé dans les systèmes de Business Intelligence ou d'analyse de données pour faciliter les requêtes et les analyses tout en réduisant les problèmes d'inconsistance des données.
 
@@ -293,7 +349,9 @@ Le Snowflake schema est un modèle de conception de bases de données qui utilis
 
 **Tables larges dénormalisées**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.029.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.029.png" />
+</p>
 
 *Une table large* est exactement ce à quoi elle ressemble : une collection hautement dénormalisée et très large de nombreux champs, généralement créée dans une base de données en colonnes.
 
@@ -306,7 +364,9 @@ Raison :
 
 **Transformations**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.030.png)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.030.png" />
+</p>
 
 Une transformation diffère d'une requête. Une *requête* récupère les données de diverses sources en fonction du filtrage et de la logique de jointure. Une *transformation* conserve les résultats pour la consommation par des transformations ou des requêtes supplémentaires. Ces résultats peuvent être stockés de manière éphémère ou permanente.
 
@@ -324,11 +384,15 @@ L'idée de base derrière les jointures distribuées est que nous devons diviser
 
 Une *jointure de diffusion* est généralement asymétrique, avec une grande table répartie sur les nœuds et une petite table qui peut facilement tenir sur un seul nœud. Le moteur de requête "diffuse" la petite table (table A) à tous les nœuds, où elle est jointe aux parties de la grande table (table B). Les jointures de diffusion sont beaucoup moins gourmandes en calcul que les jointures de hachage aléatoires.
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.031.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.031.jpeg" />
+</p>
 
 **Shuffle hash join**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.032.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.032.jpeg" />
+</p>
 
 Si aucune table n'est assez petite pour tenir sur un seul nœud, le moteur de requête utilisera une *jointure de hachage aléatoire* . Les mêmes nœuds sont représentés au-dessus et au-dessous de la ligne pointillée. La zone au-dessus de la ligne pointillée représente le partitionnement initial des tables A et B sur les nœuds.
 
@@ -336,7 +400,9 @@ Dans cet exemple, le schéma de hachage divisera la clé de jointure en trois pa
 
 **MapReduce**
 
-MapReduce était le modèle de transformation de données par lots déterminant de l'ère du Big Data, il influence encore aujourd'hui de nombreux ingénieurs de données de systèmes distribués, et il est utile que les ingénieurs de données comprennent à un niveau de base.![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.033.png)
+MapReduce était le modèle de transformation de données par lots déterminant de l'ère du Big Data, il influence encore aujourd'hui de nombreux ingénieurs de données de systèmes distribués, et il est utile que les ingénieurs de données comprennent à un niveau de base.<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.033.png" />
+</p>
 
 La première étape, "map", permet de transformer les données en entrée en un ensemble de paires clé-valeur, tandis que la seconde étape, "reduce", permet d'agréger les données en sortie.
 
@@ -351,7 +417,9 @@ La première étape, "map", permet de transformer les données en entrée en un 
 
 **Vues**
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.034.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.034.jpeg" />
+</p>
 
 Une *vue* est un objet de base de données que nous pouvons sélectionner comme n'importe quelle autre table. En pratique, une vue n'est qu'une requête qui fait référence à d'autres tables.
 
@@ -372,7 +440,9 @@ Les vues et les vues matérialisées sont similaires en ce qu'elles permettent a
 
 *Les requêtes fédérées* sont une fonctionnalité de base de données qui permet à une base de données OLAP de sélectionner une source de données externe, telle qu'un stockage d'objets ou un SGBDR.
 
-![](Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.035.jpeg)
+<p align="center">
+  <img src="Aspose.Words.d69ef8fc-5199-4df5-8324-b088891f185f.035.jpeg" />
+</p>
 
 Caractéristiques :
 

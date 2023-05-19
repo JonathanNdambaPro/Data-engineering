@@ -1,10 +1,14 @@
 ﻿Stockage
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.001.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.001.png" />
+</p>
 
 Le stockage est la partie du cycle de la data engineering qui intervient dans toutes les phases, par conséquent, elle est très importante. Ici, nous allons rentrer dans les détails dans chaque type de stockage, des éléments bruts aux abstractions que vous utiliserez tous les jours.
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.002.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.002.jpeg" />
+</p>
 
 **Ingrédients bruts du stockage de données**
 
@@ -12,7 +16,9 @@ Analysons les “Raw ingrédient”
 
 **Magnetic Disk Drive (Lecteur de disque magnétique)**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.003.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.003.jpeg" />
+</p>
 
 Un lecteur de disque magnétique est un dispositif de stockage de données qui utilise des platters (disque) magnétiques pour stocker des informations. Il est utilisé pour stocker des fichiers, des programmes et d'autres données sur un ordinateur ou un serveur, les platters tournant sont revêtus d'un film ferromagnétique. Ce film est magnétisé par une tête de lecture/écriture lors des opérations d'écriture pour coder physiquement les données binaires. La tête de lecture/écriture détecte le champ magnétique et produit un flux binaire pendant les opérations de lecture. Vous pourrez souvent les trouver sous le nom de HDD (Hard Drive Disk)
 
@@ -44,7 +50,9 @@ Considération :
 
 **Random Access Memory (RAM)**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.004.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.004.png" />
+</p>
 
 La mémoire vive (RAM) est un type de mémoire utilisé pour stocker des données temporairement lorsque l'ordinateur est en cours d'exécution. Il permet à l'ordinateur de stocker des données de manière temporaire pour une utilisation immédiate, tandis que les données sont stockées de manière permanente sur un disque dur ou un autre support de stockage de donnée. La RAM est une mémoire volatile, ce qui signifie qu'elle ne conserve pas les données lorsque l'ordinateur est éteint. Les données stockées dans la RAM sont effacées lorsque l'ordinateur est éteint ou redémarré.
 
@@ -59,7 +67,9 @@ Caractéristique :
 
 **Le cache CPU (ou mémoire cache)**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.005.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.005.png" />
+</p>
 
 *Le cache CPU (ou mémoire cache) est un type de mémoire tampon utilisé pour stocker temporairement les données les plus fréquemment utilisées par le processeur. Il est généralement intégré au processeur lui-même et il est utilisé pour accélérer les performances en réduisant les temps d'accès aux données stockées dans la mémoire vive (RAM).*
 
@@ -73,7 +83,9 @@ Caractéristique :
 
 **Un processeur (CPU pour Central Processing Unit)**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.006.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.006.png" />
+</p>
 
 Un processeur (ou CPU pour Central Processing Unit) est le composant principal d'un ordinateur qui exécute les instructions d'un programme informatique. Il est le "cerveau" de l'ordinateur, qui gère les calculs, les opérations logiques et les instructions de contrôle. Il est responsable de traiter les informations, de les stocker temporairement dans la mémoire vive (RAM) et de les transférer vers d'autres composants comme les HDD et/ou SSD de l'ordinateur pour une utilisation ultérieure.
 
@@ -83,17 +95,23 @@ S'il y a une chose à retenir, c’est que plus un composant mémoire est proche
 
 Lors de déploiement d’outils big data distribué, la sélection de composants mémoire sera votre responsabilité. Par exemple, si vous êtes dans un cas où la latence doit être faible, vous devriez vous pencher vers une solution SSD plutôt que HDD en sachant également que plus un processeur à de core plus il a de mémoire cache. La RAM aussi est importante, l’application sera donc beaucoup plus rapide, mais le coût est également plus élevé, il faudra donc trouver le bon compromis.
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.007.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.007.jpeg" />
+</p>
 
 **Sérialisation**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.008.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.008.jpeg" />
+</p>
 
 La sérialisation est le processus de convertir un objet en un flux de données (généralement un tableau binaire ou une chaîne de caractères) qui peut être stocké ou transmis à travers un réseau. Cela permet de conserver l'état d'un objet et de le récupérer plus tard.
 
 Pour faire simple, lorsque vous modifiez un fichier comme Word, il est désérialisé donc sous sa forme modifiable, quand vous sauvegardez ce fichier, il est sous une forme sérialisée que vous pouvez envoyer, partager ou stoker et nécessite un protocole adéquat (dans notre Cas Word) pour être désérialisé et utilisé à nouveau. Cette méthode est applicable pour tout type d’objet informatique et il existe de nombreux protocoles de sérialisation.
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.009.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.009.jpeg" />
+</p>
 
 Le type de sérialisation choisit à un impact notable pour les étapes en amont. par exemple les bases de données relationnelles orientées lignes organisent les données sous forme de lignes sur le disque pour prendre en charge des recherches rapides et des mises à jour sur
 
@@ -115,9 +133,13 @@ Passons au “Storage Sytems”
 
 **Machine unique versus stockage distribué**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.010.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.010.png" />
+</p>
 
-On utilise un système de stockage distribué quand les données deviennent trop volumineuses pour être stockées dans une seule machine. Le stockage distribué coordonne les activités de plusieurs serveurs pour stocker, récupérer et traiter les données plus rapidement et à plus grande échelle, tout en offrant une redondance en cas d'indisponibilité d'un serveur. Le stockage distribué est courant dans les architectures où vous souhaitez une redondance et une scalabilité intégrées pour de grandes quantités de données. Par exemple, le stockage d'objets, Apache Spark et data warehouse cloud reposent sur des architectures de stockage distribuées. Le fait d’augmenter la capacité à travers plusieurs machine est ce qu’on appelle une scalabilité horizontale, l’augmenter avec une seule machine est une scalabilité verticale.![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.011.jpeg)
+On utilise un système de stockage distribué quand les données deviennent trop volumineuses pour être stockées dans une seule machine. Le stockage distribué coordonne les activités de plusieurs serveurs pour stocker, récupérer et traiter les données plus rapidement et à plus grande échelle, tout en offrant une redondance en cas d'indisponibilité d'un serveur. Le stockage distribué est courant dans les architectures où vous souhaitez une redondance et une scalabilité intégrées pour de grandes quantités de données. Par exemple, le stockage d'objets, Apache Spark et data warehouse cloud reposent sur des architectures de stockage distribuées. Le fait d’augmenter la capacité à travers plusieurs machine est ce qu’on appelle une scalabilité horizontale, l’augmenter avec une seule machine est une scalabilité verticale.<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.011.jpeg" />
+</p>
 
 La scalabilité horizontale permet d’augmenter les performance de manière “infini” mais peut s’avérer très dur à mettre en place et à coordonner quand le nombre de machines est grand, dans le meilleur cas, on laisse des service cloud se charger de cette étape.
 
@@ -147,7 +169,9 @@ Dans ce cas de figure, les données utilisent ce qu’on appelle le système BAS
 
 **Stockage d'objets**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.012.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.012.png" />
+</p>
 
 Object storage est un type de stockage de données qui permet de stocker des objets (généralement des fichiers) en utilisant une architecture distribuée. Les objets sont organisés dans des "buckets" (conteneurs) et sont accessibles via une interface de programmation d'application (API). Les objets sont identifiés par un identifiant unique et peuvent être stockés sur des serveurs distants, ce qui permet une récupération de données plus rapide et une meilleure tolérance aux pannes. Les principaux avantages de l'object storage sont sa scalabilité, sa fiabilité et sa flexibilité pour gérer les données non structurées.
 
@@ -163,7 +187,9 @@ Dans un environnement cloud, l'espace de stockage disponible est pratiquement il
 
 **Recherche d'objet**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.013.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.013.png" />
+</p>
 
 le stockage d’objet est un key-value store, contrairement au système fichier, on n’utilise pas de notion d’arborescence pour la recherche d’objet, il faut rechercher la bonne clé pour accéder à la bonne donnée
 
@@ -182,7 +208,9 @@ Comme mentionné, les magasins d'objets ne prennent pas en charge les mises à j
 
 **Classes et niveaux de stockage**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.014.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.014.png" />
+</p>
 
 Fournisseurs de cloud proposent désormais des classes de stockage qui réduisent les prix du stockage de données en échange d'un accès réduit ou d'une durabilité réduite. Nous utilisons ici le terme *accès réduit*, car bon nombre de ces niveaux de stockage rendent toujours les données hautement disponibles, mais avec des coûts de récupération élevés en échange de coûts de stockage réduits.
 
@@ -190,7 +218,9 @@ Dans cet exemple de GCP (Google cloud platform) on peut voir que chaque à une s
 
 **Systèmes de stockage basés sur le cache et la mémoire**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.015.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.015.png" />
+</p>
 
 un système basé sur la mémoire cache et comme basé sur la mémoire cache et/ou RAM, ça dépend de l’outil, il permet dans une architecture de données et/ou d’application d’avoir accès au données souvent demandé et donc d’avoir une latence très faible.
 
@@ -198,7 +228,9 @@ Mais comme nous l’avons vu plus haut, ce type de mémoire sont très sensibles
 
 **Le système de fichiers distribué Hadoop**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.016.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.016.jpeg" />
+</p>
 
 Hadoop est similaire au stockage d'objets, mais avec une différence clé : Hadoop combine le calcul et le stockage sur les mêmes nœuds, où les magasins d'objets ont généralement une prise en charge limitée du traitement interne.
 
@@ -220,7 +252,9 @@ Les concurrents de Kafka (dont Amazon Kinesis, Apache Pulsar et Google Cloud Pub
 
 **Index, partitionnement et clustering**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.017.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.017.jpeg" />
+</p>
 
 Index fournir une carte de la table pour des champs particuliers et permettre une recherche extrêmement rapide des enregistrements individuels. Sans index, une base de données devrait parcourir une table entière pour trouver les enregistrements satisfaisant uneWHERE condition.
 
@@ -234,17 +268,23 @@ Le clustering, quant à lui, est un mécanisme utilisé pour regrouper les ligne
 
 **Data Warehouse**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.018.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.018.jpeg" />
+</p>
 
 Un data warehouse est une OLAP. Une architecture de centralisation des données et à un modèle organisationnel au sein d'une entreprise. La limitation est que le data warehouse cloud ne peuvent pas gérer des données véritablement non structurées, telles que des images, des vidéos ou de l'audio, contrairement à un véritable data lake. Les data warehouses cloud peuvent être associés au stockage d'objets pour fournir une solution complète de data lake.
 
 **Data Lake**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.019.jpeg)Un data lake est un système de stockage de données en nuage qui permet de stocker des données non structurées, semi-structurées et structurées de diverses sources à leur format d'origine. Il permet de stocker des données brutes telles quelles, sans les formater ni les restreindre par des schémas prédéfinis.
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.019.jpeg" />
+</p>Un data lake est un système de stockage de données en nuage qui permet de stocker des données non structurées, semi-structurées et structurées de diverses sources à leur format d'origine. Il permet de stocker des données brutes telles quelles, sans les formater ni les restreindre par des schémas prédéfinis.
 
 **Data Lakehouse**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.020.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.020.png" />
+</p>
 
 Un data lakehouse est une combinaison d'un data lake et d'une plateforme de gestion de données traditionnelle (data warehousing), qui permet aux utilisateurs de stocker et d'analyser des données de différentes sources de manière efficace. Il utilise les avantages d'un data lake pour stocker des données non structurées, semi-structurées et structurées à leur format d'origine, tout en intégrant les fonctionnalités de gestion de données traditionnelles pour permettre une analyse avancée et des requêtes hautes performances.
 
@@ -254,7 +294,9 @@ La principale différence entre un data lake et un data lakehouse est que le dat
 
 **Catalogue de données**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.021.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.021.png" />
+</p>
 
 Un catalogue de données (data catalog) est un système qui permet de décrire, de classer et de découvrir les données stockées dans un entrepôt de données ou un data lake. Il permet aux utilisateurs de rechercher, de décrire et de comprendre les données disponibles dans le système de stockage de données. Il peut également être utilisé pour gérer les métadonnées, comme les définitions de colonnes, les descriptions de tables et les informations de sécurité.
 
@@ -262,7 +304,9 @@ Un catalogue de données peut également inclure des fonctionnalités de gouvern
 
 **Data Sharing**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.022.jpeg)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.022.jpeg" />
+</p>
 
 *Le partage de données* permet organisations et individus pour partager des données spécifiques et des autorisations soigneusement définies avec des entités spécifiques. Le partage de données permet aux data scientists de partager les données d'un bac à sable avec leurs collaborateurs au sein d'une organisation. Au sein des organisations, le partage de données facilite la collaboration entre les entreprises partenaires. Par exemple, une entreprise de technologie publicitaire peut partager des données publicitaires avec ses clients.
 
@@ -270,7 +314,9 @@ Un environnement cloud mutualisé facilite grandement la collaboration interorga
 
 **Schéma**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.023.png)
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.023.png" />
+</p>
 
 Schema peut fonctionner comme une sorte de pierre de Rosette, des instructions qui nous disent comment lire les données. Il existe deux principaux modèles de schéma : le schéma en écriture et le schéma en lecture.
 
@@ -295,7 +341,9 @@ Les magasins d'objets cloud atténuent considérablement le risque de perte de d
 
 **Données chaudes, chaudes et froides**
 
-![](Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.024.png)En fonction de la fréquence à laquelle les données sont consultées, nous pouvons approximativement répartir la manière dont elles sont stockées en trois catégories de persistance : chaude, tiède et froide.
+<p align="center">
+  <img src="Aspose.Words.121b389d-1e38-4258-9340-de26ccbb1fa8.024.png" />
+</p>En fonction de la fréquence à laquelle les données sont consultées, nous pouvons approximativement répartir la manière dont elles sont stockées en trois catégories de persistance : chaude, tiède et froide.
 
 **Données chaudes**
 

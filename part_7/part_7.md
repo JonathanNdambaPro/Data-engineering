@@ -1,10 +1,14 @@
 ﻿Ingestion
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.001.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.001.png" />
+</p>
 
 **Qu'est-ce que l'ingestion de données ?**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.002.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.002.png" />
+</p>
 
 *L'ingestion de données* estle processus de déplacement des données d'un endroit à un autre.
 
@@ -17,14 +21,18 @@ Cela vaut la peine de comparer rapidement l'ingestion de données avecintégrati
 
 **Données limitées versus données illimitées**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.003.jpeg)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.003.jpeg" />
+</p>
 
 - *Les données illimitées* sont des données telles qu'elles existent dans la réalité, au fur et à mesure que des événements se produisent, sporadiquement ou continuellement, en cours et en continu.
 - *Les données délimitées* sont un moyen pratique de répartir les données sur une sorte de limite, telle que le temps.
 
 **La fréquence**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.004.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.004.png" />
+</p>
 
 Les fréquences d'ingestion varient considérablement de lentes à rapides, une entreprise peut envoyer ses données fiscales à un cabinet comptable une fois par an, un système peut ingérer en continu des événements provenant de capteurs IoT et les traiter en quelques secondes.
 
@@ -32,11 +40,15 @@ On parle de temps réel, mais dans la réalité, on est plus sûr du presque tem
 
 **Ingestion synchrone ou asynchrone**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.005.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.005.png" />
+</p>
 
 Avec *ingestion synchrone* , la source, l'ingestion et la destination ont des dépendances complexes et sont étroitement couplées. Chaque étape du cycle de vie de l'ingénierie des données comporte des processus A, B et C dépendant directement les uns des autres, si le processus A échoue, les processus B et C ne peuvent pas démarrer ; si le processus B échoue, le processus C ne démarre pas
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.006.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.006.png" />
+</p>
 
 Avec *l'ingestion asynchrone* , les dépendances peuvent désormais fonctionner au niveau des événements individuels, comme elles le feraient dans un backend logiciel construit à partir de microservices. Les événements individuels deviennent disponibles dans le stockage dès qu'ils sont ingérés individuellement.
 
@@ -46,7 +58,9 @@ En mouvementles données de la source à la destination impliquent la sérialisa
 
 **Scalabilité**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.007.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.007.png" />
+</p>
 
 En théorie, votre ingestion ne devrait jamais être un goulot d'étranglement. En pratique, les goulots d'étranglement d'ingestion sont assez courants. Le débit de données et la scalabilité du système deviennent critiques à mesure que vos volumes de données augmentent et que les exigences changent. Concevez vos systèmes pour qu'ils évoluent et se réduisent afin de s'adapter de manière flexible au débit de données souhaité.
 
@@ -111,23 +125,33 @@ Les métadonnées sont des données sur les données. Les métadonnées peuvent 
 
 Une stratégie *push* implique qu'un système source envoie des données à une cible, tandis qu'une stratégie *pull* implique qu'une cible lit les données directement à partir d'une source. Les frontières entre ces stratégies sont floues.
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.008.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.008.png" />
+</p>
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.009.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.009.png" />
+</p>
 
 Une autre pattern consiste à demander à la source à partir de la destination s'il y eu un changement aux niveau des données, et uniquement pull les nouveaux changements s'il y en a.
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.010.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.010.png" />
+</p>
 
 **Considérations sur l'ingestion par batch**
 
 L'ingestion par lots, qui implique le traitement de données en bloc, est souvent un moyen pratique d'ingérer des données. Cela signifie que les données sont ingérées en prenant un sous-ensemble de données d'un système source, en fonction d'un intervalle de temps ou de la taille des données accumulées
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.011.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.011.png" />
+</p>
 
 *L'ingestion de lots à intervalles de temps* est répandue dans les ETL commerciaux traditionnels pour l'entreposage de données. Ce modèle est généralement utilisé pour traiter les données une fois par jour, pendant la nuit, en dehors des heures de travail, pour fournir des rapports quotidiens, mais d'autres fréquences peuvent également être utilisées.
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.012.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.012.png" />
+</p>
 
 *L'ingestion de lots basée sur la taille* est assez courante lorsque les données sont déplacées d'un système basé sur le streaming vers un stockage d'objets ; en fin de compte, vous devez découper les données en blocs discrets pour un traitement futur dans un lac de données. Certains systèmes d'ingestion basés sur la taille peuvent diviser les données en objets en fonction de divers critères, tels que la taille en octets du nombre total d'événements.
 
@@ -147,13 +171,17 @@ Alors que les mises à jour différentielles sont idéales pour minimiser le tra
 
 **Exportation et ingestion basées sur des fichiers**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.013.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.013.png" />
+</p>
 
 Les données sont assez souvent déplacées entre les bases de données et les systèmes à l'aide de fichiers. Les données sont sérialisées dans des fichiers dans un format échangeable, et ces fichiers sont fournis à un système d'ingestion.
 
 Avec l'ingestion basée sur les fichiers, les processus d'exportation sont exécutés du côté de la source de données, ce qui donne aux ingénieurs du système source un contrôle total sur les données exportées et sur la manière dont les données sont prétraitées.
 
-**ETL vs ELT![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.014.jpeg)**
+**ETL vs ELT<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.014.jpeg" />
+</p>**
 
 **Migration de données**
 
@@ -175,7 +203,9 @@ Les migrations de données ne sont probablement pas courantes en tant qu'ingéni
 
 **Évolution du schéma**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.015.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.015.png" />
+</p>
 
 Évolution du schéma est courant lors de la gestion des données d'événement ; des champs peuvent être ajoutés ou supprimés, ou des types de valeur peuvent changer (par exemple, une chaîne en un entier).
 
@@ -221,7 +251,9 @@ Exemple :
 
 **Gestion des erreurs et files d'attente de lettres mortes**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.016.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.016.png" />
+</p>
 
 Les événements qui ne peuvent pas être ingérés doivent être redirigés et stockés dans un emplacement distinct appelé *file d'attente de lettres mortes*
 
@@ -235,7 +267,9 @@ Il est souvent souhaitable d'intégrer le streaming sur plusieurs sites pour une
 
 **Connexion directe à la base de données**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.017.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.017.png" />
+</p>
 
 Données peuvent être extraites de bases de données pour ingestion en interrogeant et en lisant via une connexion réseau. Le plus souvent, cette connexion est établie à l'aide d'ODBC ou de JDBC
 
@@ -278,7 +312,9 @@ Le journal binaire de la base de données enregistre chaque modification de la b
 
 **Apis**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.018.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.018.png" />
+</p>
 
 Il n'existe aucune norme appropriée pour l'échange de données via les API. Les ingénieurs de données peuvent passer beaucoup de temps à lire la documentation, à communiquer avec les propriétaires de données externes et à écrire et maintenir le code de connexion API, trois tendances modifient lentement cette situation.
 
@@ -288,7 +324,9 @@ Il n'existe aucune norme appropriée pour l'échange de données via les API. Le
 
 **Message Queues and Event-Streaming Platforms**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.019.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.019.png" />
+</p>
 
 Un *message est* géré au niveau de l'événement individuel et est censé être transitoire. Une fois qu'un message est consommé, il est reconnu et supprimé de la file d'attente.
 
@@ -301,7 +339,9 @@ Une autre considération est le débit de vos pipelines de données en temps ré
 
 **Connecteurs de données gérés**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.020.jpeg)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.020.jpeg" />
+</p>
 
 Ces outils visent à fournir un ensemble standard de connecteurs prêts à l'emploi pour épargner aux ingénieurs de données la construction d'une plomberie compliquée à connecter à une source particulière.
 
@@ -311,13 +351,17 @@ Les fournisseurs et les projets OSS ont chacun généralement des centaines d'op
 
 **Déplacer des données avec le stockage d'objets**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.021.jpeg)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.021.jpeg" />
+</p>
 
 Stockage d'objets est un système mutualisé dans des clouds publics, et il prend en charge le stockage d'énormes quantités de données. Cela rend le stockage d'objets idéal pour déplacer des données dans et hors des data lakes entre équipes et transférer des données entre organisations. Vous pouvez même fournir un accès à court terme à un objet avec une URL signée, donnant à un utilisateur une autorisation temporaire.
 
 **EDI (electronic data interchange)**
 
-Généralement des moyens quelque peu archaïques d'échange de fichiers, tels que par![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.022.jpeg) courrier électronique ou par clé USB. Les ingénieurs de données constateront que certaines sources de données ne prennent pas en charge les moyens de transport de données plus modernes, souvent en raison de systèmes informatiques archaïques ou de limitations des processus humains.
+Généralement des moyens quelque peu archaïques d'échange de fichiers, tels que par<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.022.jpeg" />
+</p> courrier électronique ou par clé USB. Les ingénieurs de données constateront que certaines sources de données ne prennent pas en charge les moyens de transport de données plus modernes, souvent en raison de systèmes informatiques archaïques ou de limitations des processus humains.
 
 Les ingénieurs peuvent au moins améliorer l'EDI grâce à l'automatisation.
 
@@ -331,7 +375,9 @@ Les principaux entrepôts de données cloud sont hautement optimisés pour l'exp
 
 **Problèmes pratiques avec les formats de fichiers courants**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.023.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.023.png" />
+</p>
 
 Les ingénieurs doivent également connaître les formats de fichiers à exporter.
 
@@ -343,7 +389,9 @@ Les formats d'exportation plus robustes et expressifs incluent Parquet, Avro, Ar
 
 **SSH**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.024.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.024.png" />
+</p>
 
 SSH (Secure Shell) est un protocole de réseau qui permet de se connecter à un ordinateur distant et de lancer des commandes à distance. Il utilise une connexion cryptée pour assurer la sécurité de la communication entre les deux ordinateurs. Il est souvent utilisé pour accéder à des serveurs à distance, configurer des réseaux, transférer des fichiers, etc. Il peut également être utilisé pour créer des tunnels réseau sécurisés pour protéger les données sensibles.
 
@@ -352,7 +400,9 @@ SSH (Secure Shell) est un protocole de réseau qui permet de se connecter à un 
 
 **SFTP et SCP**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.025.jpeg)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.025.jpeg" />
+</p>
 
 SFTP et SCP sont tous les deux des protocoles de transfert de fichiers qui reposent sur SSH pour assurer la sécurité de la communication. Cependant, ils ont des fonctionnalités et des utilisations légèrement différentes :
 
@@ -361,14 +411,20 @@ SFTP et SCP sont tous les deux des protocoles de transfert de fichiers qui repos
 
 **Webhooks**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.026.jpeg)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.026.jpeg" />
+</p>
 
 Comme vu précédemment, les webhooks contrairement à l'api envoie les données automatiquement quand un événement se produit.
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.027.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.027.png" />
+</p>
 
 **Transfer Appliances for Data Migration**
 
-![](Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.028.png)
+<p align="center">
+  <img src="Aspose.Words.93567fcc-5dc5-42cd-a298-19b2e328194c.028.png" />
+</p>
 
 Pourdes quantités massives de données (100 To ou plus), le transfert de données directement sur Internet peut être un processus lent et coûteux. À cette échelle, le moyen le plus rapide et le plus efficace de déplacer des données n'est pas par câble, mais par camion. Les fournisseurs de cloud offrent la possibilité d'envoyer vos données via une "boîte de disques durs" physique. Commandez simplement un périphérique de stockage, appelé dispositif de *transfert* , chargez vos données à partir de vos serveurs, puis renvoyez-les au fournisseur de cloud, qui téléchargera vos données.

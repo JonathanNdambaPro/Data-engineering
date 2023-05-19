@@ -1,12 +1,16 @@
 ﻿Servir des données pour l'analyse, l'apprentissage automatique et l'ETL inverse
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.001.png)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.001.png" />
+</p>
 
 **Considérations générales pour la diffusion de données**
 
 **Confiance**
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.002.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.002.jpeg" />
+</p>
 
 Les utilisateurs finaux doivent avoir confiance dans les données qu'ils reçoivent. Souvent, les parties prenantes perdent confiance dans les données. Une fois la confiance perdue, il est incroyablement difficile de la regagner. Cela conduit inévitablement l'entreprise à ne pas fonctionner au maximum de son potentiel, les données et les équipes de données perdant leur crédibilité (et pouvant être dissoutes).
 
@@ -17,7 +21,9 @@ Pour réaliser la qualité des données et renforcer la confiance des parties pr
 
 Il incombe aux ingénieurs de renforcer la confiance dans leurs SLA et SLO avec leurs utilisateurs finaux et les parties prenantes en amont.
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.003.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.003.jpeg" />
+</p>
 
 Un contrat de niveau de service (SLA, pour Service Level Agreement) est un accord entre un fournisseur de services et un client qui définit les niveaux de service attendus pour un service particulier. Dans le contexte des données, un contrat SLA peut inclure des éléments tels que la disponibilité, la performance, la récupération après sinistre, la sécurité et la confidentialité des données.
 
@@ -41,7 +47,9 @@ Voici quelques questions à vous poser avant de commencer :
 
 **Produits de données**
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.004.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.004.jpeg" />
+</p>
 
 Lors de la création d'un produit de données, gardez ces considérations à l'esprit :
 
@@ -64,7 +72,9 @@ Les produits de données en libre-service, qui donnent à l'utilisateur la possi
 
 **Définitions des données et logique**
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.005.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.005.jpeg" />
+</p>
 
 *Définition des données* fait référence à la signification des données telles qu'elles sont comprises dans l'ensemble de l'organisation.
 
@@ -88,7 +98,9 @@ Consiste à l’utilisations *de l'analyse commerciale des* données historiques
 
 Un dashboard montre de manière concise aux décideurs les KPI (Key of performance) d'une organisation par rapport à une poignée d'indicateurs de base, tels que les ventes et la fidélisation de la clientèle.
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.006.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.006.jpeg" />
+</p>
 
 Les analystes sont souvent chargés par les parties prenantes de l'entreprise de créer un *rapport* L'objectif d'un rapport est d'utiliser les données pour générer des informations et des actions. La différence avec un dashboard est flou, mais si on devait la résumer, le rapport est en amont du dashboard et moins formel.
 
@@ -96,7 +108,9 @@ Les rapports commencent généralement par des demandes ad hoc. Si les résultat
 
 **Analytique opérationnelle**
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.007.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.007.jpeg" />
+</p>
 
 l'analytique opérationnelle utilise les données pour prendre *des mesures immédiates*
 
@@ -125,9 +139,13 @@ Considération :
 
 **Machine learning**
 
-**Ce qu'un ingénieur de données doit savoir sur le ML![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.008.jpeg)**
+**Ce qu'un ingénieur de données doit savoir sur le ML<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.008.jpeg" />
+</p>**
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.009.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.009.jpeg" />
+</p>
 
 - La différence entre l'apprentissage supervisé, non supervisé et semi-supervisé.
 - La différence entre les techniques de classification et de régression.
@@ -149,7 +167,9 @@ Considération :
 
 **Échange de fichiers**
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.010.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.010.jpeg" />
+</p>
 
 Échange de fichiers est omniprésent dans le service de données. Nous traitons les données et générons des fichiers à transmettre aux consommateurs de données.
 
@@ -169,7 +189,9 @@ Bien sûr, il est difficile d'adapter le service de fichiers uniques et vos beso
 
 **Bases de données**
 
-![](Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.011.jpeg)
+<p align="center">
+  <img src="Aspose.Words.50c7f59f-5dd4-4b79-9b00-713f9d84e0e1.011.jpeg" />
+</p>
 
 Les Bases de données sont une couche critique dans le service des données pour l'analyse et le ML Surtout les OLAP par leur capacité élevée de lecture. Un analyste ou un scientifique des données peut interroger une base de données à l'aide d'un éditeur SQL et exporter ces résultats dans un fichier CSV pour une utilisation par une application en aval, ou analyser les résultats dans un notebook.
 

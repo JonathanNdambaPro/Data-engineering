@@ -1,8 +1,10 @@
-﻿Data Architecture
+﻿# Data Architecture
 
-Qu’est-ce qu’une Data Architecture
+## Qu’est-ce qu’une Data Architecture
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.001.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.001.png" />
+</p>
 
 L'architecture d'entreprise est la conception de systèmes pour soutenir le changement dans l'entreprise, réalisée par des décisions flexibles et réversibles prises grâce à une évaluation minutieuse des compromis.
 
@@ -20,19 +22,23 @@ Deux types d’architecture :
 - opérationnelle
 - Technique
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.002.png)L'architecture opérationnelle : Englobe les exigences fonctionnelles de ce qui doit se passer en ce qui concerne les personnes, les processus et la technologie
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.002.png" />
+</p>
+
+L'architecture opérationnelle : Englobe les exigences fonctionnelles de ce qui doit se passer en ce qui concerne les personnes, les processus et la technologie
 
 - à quels processus métier les données servent-elles ?
 - Comment l'organisation gère-t-elle la qualité des données ?
 - Quelle est la latence requise entre le moment où les données sont produites et le moment où elles deviennent disponibles pour interroger ?
 
-*L'architecture technique* :
+L'architecture technique :
 
 décrit comment les données sont ingérées, stockées, transformées et servies tout au long du cycle de vie de l'ingénierie des données.
 
 - Comment déplacerez-vous 10 To de données toutes les heures d'une base de données source vers votre lac de données ?
 
-“Good” Data Architecture
+## “Good” Data Architecture
 
 Une bonne architecture de données répond aux besoins de l'entreprise avec un ensemble commun et largement réutilisable de blocs de construction tout en maintenant la flexibilité et en faisant des compromis appropriés, *flexible et facilement maintenable*
 
@@ -67,7 +73,7 @@ Les nôtres :
 1) Priorité à la sécurité.
 1) Adoptez le FinOps.
 
-**Choisissez judicieusement les composants communs**
+## Choisissez judicieusement les composants communs
 
 choisir des composants et des pratiques communs qui peuvent être largement utilisés dans une organisation
 
@@ -78,7 +84,7 @@ choisir des composants et des pratiques communs qui peuvent être largement util
 
 priorisation des composants communs déjà utilisés plutôt que de réinventer la roue
 
-**Planifier en cas d'échec**
+## Planifier en cas d'échec
 
 *“Tout échoue, tout le temps.”*
 
@@ -90,22 +96,22 @@ Le pourcentage de temps pendant lequel un service ou un composant informatique e
 
 Le probabilité d'un système de répondre à des normes définies dans l'exécution de sa fonction prévue pendant un intervalle spécifié.
 
-Recovery time objective (RTO)
+### Recovery time objective (RTO)
 
 Ledurée maximale acceptable pour une panne de service ou de système. L'objectif de temps de récupération (RTO) est généralement défini en déterminant l'impact commercial d'une panne. Un RTO d'un jour peut convenir à un système de reporting interne. Une panne de site Web de seulement cinq minutes pourrait avoir un impact commercial négatif important sur un détaillant en ligne.might be fine for an internal reporting system. A website outage of just five minutes could have a significant adverse business impact on an online retailer.
 
-Recovery point objective (RPO)
+### Recovery point objective (RPO)
 
 L'état acceptable après la récupération. Dans les systèmes de données, les données sont souvent perdues lors d'une panne. Dans ce cadre, leL'objectif de point de récupération (RPO) fait référence à la perte de données maximale acceptable.
 
 Doivent être pris en compte lors de la décision des choix architecturaux
 
-**Architecte pour la scalabilité et élastique**
+## Architecte pour la scalabilité et élastique
 
 - Les systèmes évolutifs peuvent *évoluer* pour gérer des quantités importantes de données, notre capacité à évoluer nous permet de gérer temporairement des charges extrêmes
 - Les systèmes évolutifs peuvent réduire. Une fois que le pic de charge diminue, nous devrions automatiquement supprimer la capacité pour réduire les coûts.
 
-**L'architecture, c'est le leadership**
+## L'architecture, c'est le leadership
 
 Cette partie est plus réservée pour les Data Architect, mais c’est bon de le savoir.
 
@@ -113,11 +119,11 @@ Ils possèdent les compétences techniques d'un ingénieur de données mais ne p
 
 En tant qu'ingénieur de données, vous devez pratiquer le leadership en architecture et rechercher le mentorat d'architectes. À terme, vous pourriez bien occuper vous-même le rôle d'architecte.
 
-**Soyez toujours architecte**
+## Soyez toujours architecte
 
 le travail de l'architecte est de développer une connaissance approfondie de la architecture de base (état actuel), développer une cibler l'architecture et tracer une plan de séquencement pour déterminer les priorités et l'ordre des changements d'architecture, elle doit être collaborative. L'architecture cible devient une cible mobile, ajustée en réponse aux changements commerciaux et technologiques internes et mondiaux. Le plan de séquençage détermine les priorités immédiates de livraison.
 
-**Construire des systèmes faiblement couplés**
+## Construire des systèmes faiblement couplés
 
 Lorsque l'architecture du système est conçue pour permettre aux équipes de tester, de déployer et de modifier des systèmes sans dépendre d'autres équipes, les équipes ont besoin de peu de communication pour accomplir leur travail. En d'autres termes, l'architecture et les équipes sont faiblement couplées.
 
@@ -135,11 +141,11 @@ Organisationnel :
 1) Conséquence de la caractéristique 2, chaque équipe peut rapidement évoluer et améliorer sa composante indépendamment du travail des autres équipes.
 1) Plus précisément, la caractéristique 3 implique que les équipes peuvent publier des mises à jour de leurs composants avec un temps d'arrêt minimal. Les équipes publient en continu pendant les heures de travail normales pour apporter des modifications au code et les tester.
 
-**Prendre des décisions réversibles**
+## Prendre des décisions réversibles
 
 Le paysage des données évolue rapidement. La technologie ou la pile en vogue d'aujourd'hui est l'arrière-pensée de demain. L'opinion populaire change rapidement. Vous devez viser des décisions réversibles, car elles ont tendance à simplifier votre architecture et à la maintenir agile.
 
-**Prioriser la sécurité**
+## Prioriser la sécurité
 
 Responsabilité du provider cloud :
 
@@ -149,7 +155,7 @@ Responsabilité de l’utilisateur :
 
 il incombe en dernier ressort à l'utilisateur de concevoir un modèle de sécurité pour ses applications et ses données et d'exploiter les capacités du cloud pour réaliser ce modèle. En tant que data engineer vous devez vous concentrer sur la sécurité des données comme par exemple éviter l’accès des données ouvert au publique, ces services sont accessible directement avec la configuration du provider mais ne doivent pas être oublié car vous en êtes le responsable
 
-**Adoptez le FinOps**
+## Adoptez le FinOps
 
 Le *FinOps est une discipline de gestion financière et une pratique culturelle en évolution dans le cloud qui permet aux organisations d'obtenir une valeur commerciale maximale en aidant les équipes d'ingénierie, de finance, de technologie et d'affaires à collaborer sur des décisions de dépenses basées sur les données.*
 
@@ -166,15 +172,17 @@ Cloud :
 
 Principaux concepts d'architecture
 
-**Domaines et Services**
+## Domaines et Services
 
 Domaine : Le domaine du monde réel pour lequel vous créez une architecture Service : Un ensemble de fonctionnalités dont le but est d'accomplir une tâche
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.003.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.003.png" />
+</p>
 
 Pour déterminer ce que le domaine doit englober et quels services inclure, le meilleur conseil est simplement d'aller parler avec les utilisateurs et les parties prenantes, d'écouter ce qu'ils disent et de créer les services qui les aideront à faire leur travail. Évitez le piège classique de l'architecture dans le vide.
 
-**Systèmes distribués, évolutivité et conception pour l'échec**
+## Systèmes distribués, évolutivité et conception pour l'échec
 
 Scalabilité
 
@@ -208,9 +216,11 @@ workers node : machine qui exécute les sous-tâches
 
 leader node : machine qui coordonne le reste des machines
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.004.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.004.png" />
+</p>
 
-**Coupling**
+## Coupling
 
 Le coupling est la notion qui définit à quel point les éléments composants votre architecture sont dépendants les uns des autres.
 
@@ -222,23 +232,29 @@ Une architecture à fort couplage est lui très simple à mettre en place et est
 
 l’objectif est de trouver l’architecture qui est un bon compromis entre les deux en fonction du usecase
 
-**Niveaux d'architecture Niveau unique**
+## Niveaux d'architecture Niveau unique
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.005.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.005.png" />
+</p>
 
 est l’architecture la plus couplée, peu importe quel élément tombe en panne, c’est toute l’architecture qui tombe, c’est bien pour les tests, mais à éviter pour la production
 
-**Multi-niveau**
+## Multi-niveau
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.006.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.006.png" />
+</p>
 
 L’architecture à plusieurs niveaux permet de séparer les responsabilités (chaque couche n’a qu’une seule tâche à faire et n’est pas forcément dépendante des autres layers). Dans l’exemple ci-dessus le data layer ne dépend d’aucun layer, le logic layer ne dépend pas du presentation layer, en plus chaque layer peu utiliser la technologie que l’on veut.
 
 Une bonne idée serait d’utiliser en plus de cette architecture pour chaque couche des systèmes distribuée pour réduire les probabilités de panne (par exemple le data layer est important si on utilise une base de données distribuée et/ou une réplication de la base de donnée, les chances de panne de l’architecture deviennent très faibles).
 
-**Monolithes VS Microservices**
+## Monolithes VS Microservices
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.007.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.007.png" />
+</p>
 
 Le monolithe est le fait que toute la logique est comprise dans une seule codebase, pas de notion de domaine de service et autre, un cas extrême de monolithe est une architecture à un seul niveau.
 
@@ -246,9 +262,11 @@ Comme on peut le deviner, une application monolithe amène à un manque de modul
 
 L’architecture microservice elle va essayé au mieux de découpler tout ce qui est possible que ça soit les services, les domaines, le code, etc. cette architecture assure que peu importe ce qui tombe en panne, le reste fonctionne.
 
-**Single-Tenant vs Multi-Tenant**
+## Single-Tenant vs Multi-Tenant
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.008.jpeg)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.008.jpeg" />
+</p>
 
 - Plusieurs services d'une grande entreprise partagent-ils le même entrepôt de données ?
 - L'organisation partage-t-elle les données de plusieurs gros clients dans la même
@@ -261,7 +279,7 @@ Considération :
 
 - Les locataires ne doivent pas se connaître et les ingénieurs doivent empêcher les fuites de données
 
-**Event-Driven Architecture**
+## Event-Driven Architecture
 
 Event : Sont définis comme des changements d’états de quelque chose
 
@@ -276,15 +294,19 @@ Exemple:
 - Le routage
 - La consommation d'événements
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.009.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.009.png" />
+</p>
 
 Très utilisé pour les architectures faiblement couplées
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.010.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.010.png" />
+</p>
 
-**Brownfield Versus Greenfield Projects**
+## Brownfield Versus Greenfield Projects
 
-**Brownfield projects**
+## Brownfield projects
 
 Il s’agit de reprendre un projet déjà en cours, ce type de projet nécessite une refactorisation et une réorganisation de l’architecture
 
@@ -297,7 +319,7 @@ modèle strangler : les nouveaux systèmes remplacent lentement et progressiveme
 
 Éviter de le faire de manière brutale, il est possible que l’évolution complète de l’architecture s’avère impossible.
 
-**Greenfield projects**
+## Greenfield projects
 
 Il s’agit d’un nouveau projet, sans héritage qui laisse davantage de liberté quant aux choix de l’architecture.
 
@@ -305,13 +327,15 @@ Considération :
 
 - s’orienté vers l’utile qui a fait ses preuves et qui a de bons retours sur le marché/communauté et ne pas tendre aux dernières technologies juste pour créer un effet CV
 
-**Exemples et types d'architecture de données**
+## Exemples et types d'architecture de données
 
-**Data Warehouse**
+## Data Warehouse
 
 *l'entrepôt de données* est un hub de données central utilisé pour le reporting et l'analyse. Les données d'un entrepôt de données sont généralement très formatées et structurées pour les cas d'utilisation analytiques
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.011.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.011.png" />
+</p>
 
 Deux types d’architecture :
 
@@ -325,28 +349,32 @@ Pour l’organisationnelle, il y a deux choses à prendre en compte :
 
 *Pour l’architecture technique, on s’oriente vers les MPP (Massive processing parallel) qui utilise le même langage que les BDD usuelles, mais optimiser pour le traitement massif de lecture de données pour permettre aux analystes de pouvoir explorer les données sans problématique de latence.*
 
-ETL vs ELT :
+## ETL vs ELT
 
 L’ETL (Extraction, Transform, Load) est une méthode de traitement de données qui consiste à transformer les données avant de les intégrer dans le data warehouse, L’ELT (Extraction, Load, Transform) consiste à charger dans le data warehouse puis de profiter de la puissance de calcule (MPP) pour faire les transformations pour les exposer.
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.012.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.012.png" />
+</p>
 
-The cloud data warehouse
+## The cloud data warehouse
 
 Le cloud data warehouse va remplacer le MPP installer on-premise, cette architecture va permettre au entreprise d’éviter une installation de MPP pouvant aller jusqu’à plusieurs millions d’euros à une location du stockage et du cacule.
 
-**Datamarts**
+## Datamarts
 
 le magasin de données est un sous-ensemble plus raffiné d'un entrepôt conçu pour servir l'analyse et la création de rapports, axé sur une seule sous-organisation, un seul département ou un seul secteur d'activité ; chaque département possède son propre data mart, spécifique à ses besoins
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.013.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.013.png" />
+</p>
 
 Considération :
 
 - un datamart rend les données plus facilement accessibles aux analystes et aux développeurs de rapports.
 - les magasins de données fournissent une étape de transformation supplémentaire au-delà de celle fournie par les pipelines ETL ou ELT initiaux.
 
-Datalake
+## Datalake
 
 Le Datalake ressemble grandement à un data warehouse cependant il est beaucoup moins structuré, on peut y mettre n’importe quel type de données, non structuré (image, son, texte..) semi-structuré (JSON, XML, HTML, etc.) et structuré (tabulaire). L’idée première est de stocker les données sans traitement avec l’idée de les utiliser si besoin est.
 
@@ -354,7 +382,10 @@ Cette solution offre une solution à bas coût, mais a un contrecoup. La plupart
 
 Si l’utilisation est poussée dans l’entreprise où vous êtes vous devez être sûr que les données sont bien gérées, heureusement l’émergence de data lakehouse commence à être entreprise.
 
-**Data Lakehouse![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.014.jpeg)**
+## Data Lakehouse
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.014.jpeg" />
+</p>
 
 il y a de nouvelles possibilité de gérer les problématiques des datalake par exemple DataBricks à commencer à parler d’un Data lakehouse, il intègre le contrôle et la gestion de données.
 
@@ -372,9 +403,11 @@ D (Durabilité) : La durabilité est le quatrième principe de l’approche ACID
 
 Avec le temps, il y a de grandes chances qu’il y ait une convergence entre le data lake et le data warehouse complète.
 
-**Modern Data Stack**
+## Modern Data Stack
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.015.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.015.png" />
+</p>
 
 l'objectif principal de la pile de données moderne est d'utiliser des composants prêts à l'emploi, prêts à l'emploi, faciles à utiliser et basés sur le cloud pour créer une solution modulaire et économique
 
@@ -384,9 +417,11 @@ Objectif : réduire la complexité et augmenter la modularisation
 
 Dû à sa simplicité d’utilisation les entreprises tendent et tendrons vers ça.
 
-**Architecture lambda**
+## Architecture lambda
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.016.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.016.png" />
+</p>
 
 Même si de moins en moins utilisé comme l’architecture Kappa que nous verrons ci-dessous, il est important de parler de cette architecture qui était grandement utilisé dans le passé.
 
@@ -402,9 +437,11 @@ Considération :
 
 Dans la pratique, concilier les deux flux, c'est avéré difficile et les technologies d’aujourd'hui nous permet de l’éviter.
 
-**Architecture Kappa**
+## Architecture Kappa
 
-![](Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.017.png)
+<p align="center">
+  <img src="Aspose.Words.1a2e8aa6-e78f-4606-a900-a6b510731155.017.png" />
+</p>
 
 Dans l’architecture Kappa, on considère toutes les données comme faisant partie d’un streaming, en effet même si les données ne sont pas en batch en les lisant partie par partie les lot.
 
